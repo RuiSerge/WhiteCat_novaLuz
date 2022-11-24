@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Whitecat_novaLuz" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="../build/build-gcc/whc_nova_luz-debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build/build-gcc/" />
+				<Option object_output="../build/build-gcc/debug-obj" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-std=c++11" />
+					<Add option="-std=c11" />
+					<Add option="-m32" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libgcc" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Windows;" />
+				<Option output="../build/build-gcc/whc_nova_luz" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build/build-gcc/" />
+				<Option object_output="../build/build-gcc/release-obj" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../dependencies/includes/allegro-4-4-2" />
+			<Add directory="../dependencies/includes/audiere" />
+			<Add directory="../dependencies/includes/Cserial" />
+			<Add directory="../dependencies/includes/dmx/sunlight/dashard" />
+			<Add directory="../dependencies/includes/dmx/enttec/pro" />
+			<Add directory="../dependencies/includes/dmx/enttec/odmxusb" />
+			<Add directory="../dependencies/includes/midishare/" />
+			<Add directory="../dependencies/includes/misc" />
+			<Add directory="../Src" />
+			<Add directory="c:/MinGW/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lopenlayer -lglyph-agl -lfreetype -llogg -lvorbis -lalleggl -ljpgalleg -lalleg44.dll -luser32 -lgdi32 -lglu32 -lopengl32 -lwsock32  -liphlpapi -lpng12.dll -lz -lhpdf" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add library="winmm" />
+			<Add library="ole32" />
+			<Add library="dxguid" />
+			<Add library="../dependencies/libraries/misc/libopenlayer.a" />
+			<Add library="../dependencies/libraries/audiere/audiere.lib" />
+			<Add library="../dependencies/libraries/dmx/enttec/odmxusb/FTD2XX.lib" />
+			<Add library="../dependencies/libraries/dmx/enttec/pro/ftd2xx.lib" />
+			<Add library="../dependencies/libraries/midishare/mshare32.lib" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_calib3d248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_contrib248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_core248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_features2d248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_flann248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_gpu248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_highgui248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_imgproc248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_legacy248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_ml248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_nonfree248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_objdetect248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_ocl248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_photo248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_stitching248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_superres248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_ts248.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_video248.dll.a" />
+			<Add library="../dependencies/libraries/libopencv/libopencv_videostab248.dll.a" />
+			<Add library="../dependencies/libraries/misc/libz.a" />
+			<Add library="zlib" />
+			<Add directory="../dependencies/libraries/_dynamicLibToShare" />
+			<Add directory="../dependencies/libraries/audiere" />
+			<Add directory="../dependencies/libraries/dmx/enttec/pro" />
+			<Add directory="../dependencies/libraries/dmx/enttec/odmxusb" />
+			<Add directory="../dependencies/libraries/midishare" />
+			<Add directory="../dependencies/libraries/misc" />
+			<Add directory="../dependencies/libraries/libopencv" />
+			<Add directory="c:/MinGW/Mingw/lib" />
+		</Linker>
+		<Unit filename="../dependencies/odmxusb_terry/FTD2XX.H" />
+		<Unit filename="../src/CFG_config_panel_8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/CFG_screen.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/CORE_6.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/Call_everybody_5.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/Crossplateform.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/Doxyfile">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/Draw3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/MAIN_janv_2014_opensource_kbd.cpp" />
+		<Unit filename="../src/README.md">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/README.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/WhiteCat_OpenVersion.ico">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/WhiteCat_private.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/WhiteCat_private.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/arduino_6_UNO.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/arduino_core_6_UNO.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/arduino_device_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/audio_core5.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/audio_visu4.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/banger_core_8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/banger_visu_8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/channels_10_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/channels_9_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/chasers_core_5.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/chasers_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/chat_dock_machine.ico">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/dmx_enttec_pro.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/dmx_enttec_pro_FTDI.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/dmx_ftdi_IN_test_enttec_pro.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/dmx_functions_13.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/dmx_sunlite.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/echo3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/enttec_pro_dmxin.exe">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/faders_core_24.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/faders_operations.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/faders_visuels_26.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/generate_strings_arrays.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/gestionaire_fenetres2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/grand_master.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/graphics_rebuild1.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/grider8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/grider_calculs8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/grider_core8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/gui_boutons_rebuild1.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/help_2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/hotkey/hotkey_config_tab.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/hotkey/hotkey_config_tab.h" />
+		<Unit filename="../src/hotkey/hotkey_std_keyboard.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/hotkey/hotkey_std_keyboard.h" />
+		<Unit filename="../src/hotkey/hotkey_triggers.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/hotkey/hotkey_triggers.h" />
+		<Unit filename="../src/hotkey/sqlite3.h" />
+		<Unit filename="../src/hotkey/whc_hk_apply.cpp" />
+		<Unit filename="../src/hotkey/whc_hk_apply.h" />
+		<Unit filename="../src/hotkey/whc_hk_connector.cpp" />
+		<Unit filename="../src/hotkey/whc_hk_connector.h" />
+		<Unit filename="../src/hotkey/whc_hk_input.cpp" />
+		<Unit filename="../src/hotkey/whc_hk_input.h" />
+		<Unit filename="../src/iCat14.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/icat_core14.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/keyboard_functions2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/keyboard_routines2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/list_proj_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/list_proj_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/logicals_intres.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/midi_13.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/midi_CORE.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/midi_launchpad.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/minifaders_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/minifaders_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/mouse/whc_mouse.cpp" />
+		<Unit filename="../src/mouse/whc_mouse.h" />
+		<Unit filename="../src/mover_2013.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/mover_spline6.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/my_window_file_sample.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/my_window_file_sample.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/network_MAC_adress_3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/network_artnet_3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/numpad_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/numpad_visuel.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/patch_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/patch_splines_2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/patch_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/plot.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/plot9.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/plot_core9.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/procs_visuels_rebuild1.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/save_show_13.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/saves_export_import.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/saves_export_pdf2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/saves_menu_8.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/sequentiel_6_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/sequentiel_7_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/time_core_3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/time_visu_3.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/toolbox/whc_report.cpp" />
+		<Unit filename="../src/toolbox/whc_report.h" />
+		<Unit filename="../src/toolbox/whc_toolbox.cpp" />
+		<Unit filename="../src/toolbox/whc_toolbox.h" />
+		<Unit filename="../src/tracker_main14nov.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/trichro_core2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/trichro_visu2.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/video_tracking_core.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/video_tracking_visu.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/white_cat to do.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/whitecat.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../src/whitecat_opensource.ico">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/wizard.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/wizard_operations.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project project_number="0.8.5.2" output_directory="docAPIwhitecat" output_language="French" />
+				<doxyfile_build extract_all="1" />
+				<doxyfile_warnings warn_if_undocumented="1" />
+				<doxyfile_output latex="1" />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
