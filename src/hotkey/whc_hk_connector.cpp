@@ -216,7 +216,7 @@ int whc_hk_connector::collect()
         else return isreadkey ;  // pas de hotkey - pas de définition en cours --> on passe la main à la saisie de texte/chiffre
 
     }
-    else return -1 ; //no isreadkey - nothing to be used by command language
+    //else return -1 ; //no isreadkey - nothing to be used by command language
 
 }
 
@@ -260,7 +260,7 @@ whc_hk_apply whc_hk_connector::search_fct(whc_hk_input signature)
                 &&  (list_signature.shift()    == signature.shift())
                 &&  (list_signature.scancode() == signature.scancode()))
         {
-            i=0;
+           // i=0;
             return list_fonctionality ;
         }
     }
@@ -535,6 +535,7 @@ int whc_hk_connector::read_db_row(void *NotUsed, int row_nbr_col, char **row_dat
         {
             fprintf (pFile, "%s = %s\n", db_ColName[i], row_data_col[i] ? row_data_col[i] : "NULL");
         }
+        if (pFile>NULL)        
         fprintf (pFile, "\n");
     }
 

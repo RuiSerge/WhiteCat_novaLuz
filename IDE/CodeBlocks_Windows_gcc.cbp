@@ -91,7 +91,6 @@
 			<Add directory="../dependencies/libraries/libopencv" />
 			<Add directory="c:/MinGW/Mingw/lib" />
 		</Linker>
-		<Unit filename="../dependencies/odmxusb_terry/FTD2XX.H" />
 		<Unit filename="../src/CFG_config_panel_8.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -169,15 +168,6 @@
 		<Unit filename="../src/dmx_enttec_pro.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="../src/dmx_enttec_pro_FTDI.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="../src/dmx_ftdi_IN_test_enttec_pro.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="../src/dmx_functions_13.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="../src/dmx_sunlite.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -194,9 +184,6 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/faders_visuels_26.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="../src/generate_strings_arrays.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/gestionaire_fenetres2.cpp">
@@ -218,9 +205,6 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/gui_boutons_rebuild1.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="../src/help_2.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/hotkey/hotkey_config_tab.cpp">
@@ -313,9 +297,6 @@
 		<Unit filename="../src/patch_visu.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="../src/plot.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="../src/plot9.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -353,9 +334,6 @@
 		<Unit filename="../src/toolbox/whc_report.h" />
 		<Unit filename="../src/toolbox/whc_toolbox.cpp" />
 		<Unit filename="../src/toolbox/whc_toolbox.h" />
-		<Unit filename="../src/tracker_main14nov.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="../src/trichro_core2.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -366,9 +344,6 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/video_tracking_visu.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="../src/white_cat to do.txt">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../src/whitecat.h">
