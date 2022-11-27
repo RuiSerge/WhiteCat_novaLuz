@@ -1,0 +1,30 @@
+int close_all_windows()
+{
+    index_type=0;
+    index_list_projecteurs=0;
+    index_trichro_window=0;
+    index_visual_pad=0;
+    index_video_window=0;
+    index_show_artpoll_reply_content=0;
+    index_list_pro_devices=0;
+    index_patch_window=0;
+    index_time=0;
+    index_window_sequentiel=0;
+    index_show_banger_window=0;
+    index_menu_save=0;
+    index_show_faders=0;
+    index_show_minifaders=0;
+    index_window_chasers=0;
+    index_grider_window=0;
+    index_plot_window=0;
+    index_show_main_menu=0;
+    index_show_mover_window=0;
+    index_show_echo_window=0;
+    index_show_audio_window=0;
+    index_show_config_window=0;
+    index_show_wizard_window=0;
+    index_window_gui_iCat=0;
+    index_my_window=0;//sample
+    window_focus_id=0;
+    return(0);
+}

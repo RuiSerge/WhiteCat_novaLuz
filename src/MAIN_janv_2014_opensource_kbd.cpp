@@ -67,13 +67,13 @@ WWWWWWWW           C  WWWWWWWW   |
 
 #include <vector>
 
-
+/* code mort 27/11/2022
 #include <SmoothData.cpp>
 //création du damper sur les faders
 std::vector<SmoothData> Fader_dampered(48);
 std::vector<SmoothData> Wave_Dampered(26);
 SmoothData Curseur_Wave;//curseur de controle du wave à faire en place de wave_control
-
+*/
 
 using namespace audiere;
 using namespace ol;
