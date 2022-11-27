@@ -22,7 +22,8 @@ int recall_config_page()
     case 6:
         index_config_general=1;
         break;
-    default: break;
+    default:
+        break;
     }
     return(0);
 }

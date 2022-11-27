@@ -43,55 +43,63 @@ WWWWWWWW           C  WWWWWWWW   |
 
 int fader_damper_commands(int _x,int _y, int fd)
 {
-Rect DB(Vec2D(_x, _y+20),Vec2D( 20,20 ));
-DB.SetRoundness(4);
-DB.DrawOutline(CouleurLigne.WithAlpha(0.5));
-DB.Draw(CouleurBleuProcedure.WithAlpha(fader_damper_is_on[fd]));
-DB.DrawOutline(CouleurLigne.WithAlpha(fader_damper_is_on[fd]));
-neuro.Print("~",_x+5,_y+36);
+    Rect DB(Vec2D(_x, _y+20),Vec2D( 20,20 ));
+    DB.SetRoundness(4);
+    DB.DrawOutline(CouleurLigne.WithAlpha(0.5));
+    DB.Draw(CouleurBleuProcedure.WithAlpha(fader_damper_is_on[fd]));
+    DB.DrawOutline(CouleurLigne.WithAlpha(fader_damper_is_on[fd]));
+    neuro.Print("~",_x+5,_y+36);
 
-Rect Lev(Vec2D(_x+30, _y+15),Vec2D( 127*(Fader_dampered[fd].getdecay()),12 ));
-Rect Flev(Vec2D(_x+30, _y+15),Vec2D( 127,12 ));
-Lev.Draw(CouleurConfig);
-Flev.DrawOutline(CouleurLigne.WithAlpha(0.5));
-minichiffregris.Print("Decay",_x+35,_y+24);
-int f=127*Fader_dampered[fd].getdecay();
-petitpetitchiffregris.Print(ol::ToString(f),_x+65,_y+24);
+    Rect Lev(Vec2D(_x+30, _y+15),Vec2D( 127*(Fader_dampered[fd].getdecay()),12 ));
+    Rect Flev(Vec2D(_x+30, _y+15),Vec2D( 127,12 ));
+    Lev.Draw(CouleurConfig);
+    Flev.DrawOutline(CouleurLigne.WithAlpha(0.5));
+    minichiffregris.Print("Decay",_x+35,_y+24);
+    int f=127*Fader_dampered[fd].getdecay();
+    petitpetitchiffregris.Print(ol::ToString(f),_x+65,_y+24);
 
-Rect levDt(Vec2D(_x+30, _y+35),Vec2D( 127*(Fader_dampered[fd].getdt()*10),12 ));
-Rect FDt(Vec2D(_x+30, _y+35),Vec2D( 127,12 ));
-levDt.Draw(CouleurConfig);
-FDt.DrawOutline(CouleurLigne.WithAlpha(0.5));
-minichiffregris.Print("Delta",_x+35,_y+43);
-f=127*Fader_dampered[fd].getdt()*10;
-petitpetitchiffregris.Print(ol::ToString(f),_x+65,_y+43);
-
-
-Rect Mod(Vec2D(_x+137, _y),Vec2D( 20,10 ));
-Mod.Draw(CouleurConfig.WithAlpha(fader_damper_is_on[fd]));
-Mod.DrawOutline(CouleurLigne.WithAlpha(0.5));
-minichiffregris.Print(ol::ToString(Fader_dampered[fd].getdampermode()),_x+146,_y+8);
+    Rect levDt(Vec2D(_x+30, _y+35),Vec2D( 127*(Fader_dampered[fd].getdt()*10),12 ));
+    Rect FDt(Vec2D(_x+30, _y+35),Vec2D( 127,12 ));
+    levDt.Draw(CouleurConfig);
+    FDt.DrawOutline(CouleurLigne.WithAlpha(0.5));
+    minichiffregris.Print("Delta",_x+35,_y+43);
+    f=127*Fader_dampered[fd].getdt()*10;
+    petitpetitchiffregris.Print(ol::ToString(f),_x+65,_y+43);
 
 
-button_midi_out_visu(_x+130,_y+65,fd+1960);//decaybutton_midi_out_visu(_x+150,_y+65,fd+1960);//decay
-button_midi_out_visu(_x+150,_y+65,fd+2056);//dt
-if(window_focus_id==W_FADERS && Midi_Faders_Affectation_Type!=0)
-{
+    Rect Mod(Vec2D(_x+137, _y),Vec2D( 20,10 ));
+    Mod.Draw(CouleurConfig.WithAlpha(fader_damper_is_on[fd]));
+    Mod.DrawOutline(CouleurLigne.WithAlpha(0.5));
+    minichiffregris.Print(ol::ToString(Fader_dampered[fd].getdampermode()),_x+146,_y+8);
+
+
+    button_midi_out_visu(_x+130,_y+65,fd+1960);//decaybutton_midi_out_visu(_x+150,_y+65,fd+1960);//decay
+    button_midi_out_visu(_x+150,_y+65,fd+2056);//dt
+    if(window_focus_id==W_FADERS && Midi_Faders_Affectation_Type!=0)
+    {
 //ON OFF DAMPER
-if( mouse_x>_x && mouse_x<_x+20 && mouse_y>_y+20 && mouse_y<_y+40)
-{DB.DrawOutline(CouleurBlind);}
+        if( mouse_x>_x && mouse_x<_x+20 && mouse_y>_y+20 && mouse_y<_y+40)
+        {
+            DB.DrawOutline(CouleurBlind);
+        }
 
 //DECAY CONSTANT OF DAMPER ON OFF
-if( mouse_x>_x+30 && mouse_x<=_x+157 && mouse_y>_y+15 && mouse_y<_y+27)
-{Flev.DrawOutline(CouleurBlind);}
+        if( mouse_x>_x+30 && mouse_x<=_x+157 && mouse_y>_y+15 && mouse_y<_y+27)
+        {
+            Flev.DrawOutline(CouleurBlind);
+        }
 //DET CONSTANT OF DAMPER ON OFF
-if( mouse_x>_x+30 && mouse_x<=_x+157 && mouse_y>_y+35 && mouse_y<_y+47)
-{FDt.DrawOutline(CouleurBlind);}
+        if( mouse_x>_x+30 && mouse_x<=_x+157 && mouse_y>_y+35 && mouse_y<_y+47)
+        {
+            FDt.DrawOutline(CouleurBlind);
+        }
 //Damper mode
-if( mouse_x>_x+137 && mouse_x<_x+157 && mouse_y>_y && mouse_y<_y+10)
-{Mod.DrawOutline(CouleurBlind);}
-}
-return(0);
+        if( mouse_x>_x+137 && mouse_x<_x+157 && mouse_y>_y && mouse_y<_y+10)
+        {
+            Mod.DrawOutline(CouleurBlind);
+        }
+    }
+    return(0);
 }
 
 
@@ -438,7 +446,7 @@ int MoveFaderSpace(int ydelimitation)
                     sprintf(thetypinfo,"-");
                     break;
                 }
-                sprintf(string_last_midi_id,"MoveFaderSpace LR is Ch: %d Pitch: %d Typ: %s" , miditable[1][767],miditable[2][767],thetypinfo);
+                sprintf(string_last_midi_id,"MoveFaderSpace LR is Ch: %d Pitch: %d Typ: %s", miditable[1][767],miditable[2][767],thetypinfo);
             }
         }
 //UP DOWN
@@ -463,7 +471,7 @@ int MoveFaderSpace(int ydelimitation)
                 sprintf(thetypinfo,"-");
                 break;
             }
-            sprintf(string_last_midi_id,"MoveFaderSpace UP is Ch: %d Pitch: %d Typ: %s" , miditable[1][1635],miditable[2][1635],thetypinfo);
+            sprintf(string_last_midi_id,"MoveFaderSpace UP is Ch: %d Pitch: %d Typ: %s", miditable[1][1635],miditable[2][1635],thetypinfo);
         }
     }
 
@@ -493,14 +501,14 @@ int MoveFaderSpace(int ydelimitation)
     Line( Vec2D( 832, ydelimitation ), Vec2D( 832,ydelimitation+10)).Draw( CouleurLigne );
     Line( Vec2D( 885, ydelimitation ), Vec2D( 885,ydelimitation+10)).Draw( CouleurLigne );
 
-    petitchiffre.Print( "1-6" ,75,ydelimitation+15 );
-    petitchiffre.Print( "7-12" ,187,ydelimitation+15);
-    petitchiffre.Print( "13-18" ,296,ydelimitation+15);
-    petitchiffre.Print( "19-24" ,405,ydelimitation+15);
-    petitchiffre.Print( "25-30" ,514,ydelimitation+15);
-    petitchiffre.Print( "31-36" ,623,ydelimitation+15);
-    petitchiffre.Print( "37-42" ,732,ydelimitation+15);
-    petitchiffre.Print( "43-48" ,842,ydelimitation+15);
+    petitchiffre.Print( "1-6",75,ydelimitation+15 );
+    petitchiffre.Print( "7-12",187,ydelimitation+15);
+    petitchiffre.Print( "13-18",296,ydelimitation+15);
+    petitchiffre.Print( "19-24",405,ydelimitation+15);
+    petitchiffre.Print( "25-30",514,ydelimitation+15);
+    petitchiffre.Print( "31-36",623,ydelimitation+15);
+    petitchiffre.Print( "37-42",732,ydelimitation+15);
+    petitchiffre.Print( "43-48",842,ydelimitation+15);
 
 
 
@@ -598,7 +606,8 @@ int Commandes_faders_generales(int xf, int yf)
         case 7:
             petitchiffre.Print("RECALL",xf+5,yf+15+(50*u));
             break;
-        default: break;
+        default:
+            break;
         }
 
         if(window_focus_id==W_MINIFADERS && Midi_Faders_Affectation_Type!=0 && mouse_x>xf && mouse_x<xf+72 && mouse_y>yf+(50*u) && mouse_y<yf+(50*u)+25)
@@ -656,7 +665,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                     petitchiffrerouge.Print(ol::ToString((int)StateOfFaderBeforeLock[cmptfader]),x+(cmptfader*espacement)+12,y+273);
                 }
                 break;
-            default: break;
+            default:
+                break;
             }
             sprintf(string_channel,"%d", cmptfader+1);
 
@@ -670,7 +680,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
             case 1://espace séquenciel
                 RouteMdeFx.Draw(CouleurNiveau.WithAlpha(0.5));
                 break;
-            default: break;
+            default:
+                break;
             }
             RouteMdeFx.DrawOutline(CouleurLigne.WithAlpha(0.5));
 
@@ -826,7 +837,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                         case 1:
                             FaderB.DrawOutline(CouleurLock);
                             break;
-                        default: break;
+                        default:
+                            break;
                         }
                     }
                     else if(DockTypeIs[cmptfader][dd]==11)//chaser
@@ -973,7 +985,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                 case 1:
                     niv=LevelStopPos[cmptfader];
                     break;
-                default: break;
+                default:
+                    break;
                 }
 //ON OFF
                 switch(ActionnateStopOn[cmptfader])
@@ -986,11 +999,12 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                     Line(Vec2D(x+(cmptfader*espacement),(y+255) - LevelStopPos[cmptfader]),Vec2D(x+(cmptfader*espacement)+40,(y+255) - LevelStopPos[cmptfader])).Draw(CouleurBlind);
                     petitpetitchiffrerouge.Print(ol::ToString(niv),x+(cmptfader*espacement)+20,(y+255) - LevelStopPos[cmptfader]);
                     break;
-                default: break;
+                default:
+                    break;
                 }
             }
 //lettrages du chiffre de fader
-            neuro.Print(string_niveau ,x+(cmptfader*espacement), y-25); //niveau du fader
+            neuro.Print(string_niveau,x+(cmptfader*espacement), y-25);  //niveau du fader
 
             doom.Print(string_channel,x+(cmptfader*espacement)+70, y-40);
 //modes speciaux
@@ -1160,7 +1174,7 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
 
             }
 
-fader_damper_commands(x+(cmptfader*espacement)-10,y+440, cmptfader );
+            fader_damper_commands(x+(cmptfader*espacement)-10,y+440, cmptfader );
 //fin des 48
         }
     }

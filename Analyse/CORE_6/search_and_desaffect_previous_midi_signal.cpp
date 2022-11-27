@@ -51,7 +51,7 @@ int search_and_desaffect_previous_midi_signal(int typaction)
             }
             break;
         default:
-        break;
+            break;
         }
     }
 

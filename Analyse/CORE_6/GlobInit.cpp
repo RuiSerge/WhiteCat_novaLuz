@@ -903,14 +903,14 @@ int GlobInit()
         }
     }
 
-   //////////////WAVE//////////////////////////
-   for(int i=0;i<26;i++)
-   {
-           // Wave_Dampered[i].fix_all_damper_state_value(Fader[in]);
-           // Wave_Dampered[i].set_target_val(Fader[in]);
-            Wave_Dampered[i].set_damper_decay(1.0);
-            Wave_Dampered[i].set_damper_dt(0.1);
-   }
+    //////////////WAVE//////////////////////////
+    for(int i=0; i<26; i++)
+    {
+        // Wave_Dampered[i].fix_all_damper_state_value(Fader[in]);
+        // Wave_Dampered[i].set_target_val(Fader[in]);
+        Wave_Dampered[i].set_damper_decay(1.0);
+        Wave_Dampered[i].set_damper_dt(0.1);
+    }
 
 
 

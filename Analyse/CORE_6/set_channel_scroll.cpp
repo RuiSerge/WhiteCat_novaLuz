@@ -55,8 +55,9 @@ int set_channel_scroll( int ch)
             scroll_channelspace=236;
         }
         break;
-         default:break;
-    }
+        default:
+            break;
+        }
     }
     return(0);
 }

@@ -14,5 +14,5 @@ int emit_midi_out()
         }
     }
 
-return(0);
+    return(0);
 }

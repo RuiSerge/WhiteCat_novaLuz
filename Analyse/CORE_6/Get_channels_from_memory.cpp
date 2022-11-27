@@ -13,7 +13,7 @@ int Get_channels_from_memory(int the_mem)
                 bufferBlind[p]=Memoires[the_mem][p];
                 break;
             default:
-            break;
+                break;
             }
         }
     }

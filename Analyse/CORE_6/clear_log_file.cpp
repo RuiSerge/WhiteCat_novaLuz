@@ -1,6 +1,6 @@
 void clear_log_file()
 {
-     std::ofstream log_file("log_file.txt", std::ios_base::out | std::ios_base::trunc );
+    std::ofstream log_file("log_file.txt", std::ios_base::out | std::ios_base::trunc );
 
     char buff[20];
     struct tm *sTm;

@@ -69,7 +69,8 @@ int recall_config_page()
     case 6:
         index_config_general=1;
         break;
-    default: break;
+    default:
+        break;
     }
     return(0);
 }
@@ -92,18 +93,21 @@ int commandes_clavier()//la fonction sprintf tue l acces clavier
 
         case KEY_INSERT://affectation midi
 
-        if (key_shifts & KB_CTRL_FLAG  || index_false_control==1)
+            if (key_shifts & KB_CTRL_FLAG  || index_false_control==1)
             {
-            toggle_numerical_midi_way=toggle(toggle_numerical_midi_way);
+                toggle_numerical_midi_way=toggle(toggle_numerical_midi_way);
             }
-        else
+            else
             {
-            Midi_Faders_Affectation_Type++;
-            if(Midi_Faders_Affectation_Type>2){Midi_Faders_Affectation_Type=0;}
-            index_midi_mute=0;
-            reset_index_actions();
+                Midi_Faders_Affectation_Type++;
+                if(Midi_Faders_Affectation_Type>2)
+                {
+                    Midi_Faders_Affectation_Type=0;
+                }
+                index_midi_mute=0;
+                reset_index_actions();
             }
-        break;
+            break;
 
         case KEY_ESC://nettoyage chaine de caractere et deselection totale
 
@@ -178,8 +182,11 @@ int commandes_clavier()//la fonction sprintf tue l acces clavier
                             break;
                         }
                     }
-                if(index_do_dock==0){gridplayer_to_affect_is=-1;}
-                break;
+                    if(index_do_dock==0)
+                    {
+                        gridplayer_to_affect_is=-1;
+                    }
+                    break;
                 case W_MOVER:
                     index_affect_to_dock_mover=index_do_dock;
                     break;

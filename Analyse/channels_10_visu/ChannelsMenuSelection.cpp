@@ -45,7 +45,8 @@ int ChannelsMenuSelection(int chx, int chy)
     case 1:
         command_button_view(chx+340,chy+1,index_direct_chan,"Direct x12","",1333);
         break;
-    default: break;
+    default:
+        break;
     }
 
     command_button_view(chx+410,chy+1,index_inspekt,"View","",1334);// int x, inty ,bool state, char *textedesc, int midiaffectation
@@ -64,11 +65,11 @@ int ChannelsMenuSelection(int chx, int chy)
         command_button_view(chx+620,chy+1,Midi_Faders_Affectation_Type,"MidiAff.X8","",1625);// int x, inty ,bool state, char *textedesc, int midiaffectation
         if(toggle_numerical_midi_way==0)
         {
-        minidoomblanc.Print("P",chx+670,chy+25);
-         }
+            minidoomblanc.Print("P",chx+670,chy+25);
+        }
         else
         {
-        minidoomblanc.Print("CH",chx+670,chy+25);
+            minidoomblanc.Print("CH",chx+670,chy+25);
         }
         break;
     default:

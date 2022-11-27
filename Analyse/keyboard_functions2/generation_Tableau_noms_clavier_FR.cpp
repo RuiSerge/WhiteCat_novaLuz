@@ -1,45 +1,45 @@
 int generation_Tableau_noms_clavier_FR()
 {
-sprintf(list_keyname[0],"PGDN");
-sprintf(list_keyname[1],"UP");
-sprintf(list_keyname[2],"DOWN");
-sprintf(list_keyname[3],"ENTER");
-sprintf(list_keyname[4],"ENTER_PAD");
-sprintf(list_keyname[5],"PLUS");
-sprintf(list_keyname[6],"PLUS_PAD");
-sprintf(list_keyname[7],"MINUS");
-sprintf(list_keyname[8],"MINUS_PAD");
-sprintf(list_keyname[9],"ESC");
-sprintf(list_keyname[10],"TAB");
+    sprintf(list_keyname[0],"PGDN");
+    sprintf(list_keyname[1],"UP");
+    sprintf(list_keyname[2],"DOWN");
+    sprintf(list_keyname[3],"ENTER");
+    sprintf(list_keyname[4],"ENTER_PAD");
+    sprintf(list_keyname[5],"PLUS");
+    sprintf(list_keyname[6],"PLUS_PAD");
+    sprintf(list_keyname[7],"MINUS");
+    sprintf(list_keyname[8],"MINUS_PAD");
+    sprintf(list_keyname[9],"ESC");
+    sprintf(list_keyname[10],"TAB");
 
-sprintf(list_keyname[11],"SPACE");
-sprintf(list_keyname[12],"A");//Q
-sprintf(list_keyname[13],"B");
-sprintf(list_keyname[14],"C");
-sprintf(list_keyname[15],"D");
-sprintf(list_keyname[16],"E");
-sprintf(list_keyname[17],"F");
-sprintf(list_keyname[18],"G");
-sprintf(list_keyname[19],"H");
-sprintf(list_keyname[20],"I");
-sprintf(list_keyname[21],"J");
-sprintf(list_keyname[22],"K");
-sprintf(list_keyname[23],"L");
-sprintf(list_keyname[24],"N");
-sprintf(list_keyname[25],"O");
-sprintf(list_keyname[26],"Q");//A
-sprintf(list_keyname[27],"R");
-sprintf(list_keyname[28],"S");
-sprintf(list_keyname[29],"T");
-sprintf(list_keyname[30],"U");
-sprintf(list_keyname[31],"V");
-sprintf(list_keyname[32],"W");//Z
-sprintf(list_keyname[33],"X");
-sprintf(list_keyname[34],"Y");
-sprintf(list_keyname[35],"Z");//w
-sprintf(list_keyname[36],"LEFT");
-sprintf(list_keyname[37],"RIGHT");
-sprintf(list_keyname[38],"M");//semicolomn
-sprintf(list_keyname[39],"P");
-return(0);
+    sprintf(list_keyname[11],"SPACE");
+    sprintf(list_keyname[12],"A");//Q
+    sprintf(list_keyname[13],"B");
+    sprintf(list_keyname[14],"C");
+    sprintf(list_keyname[15],"D");
+    sprintf(list_keyname[16],"E");
+    sprintf(list_keyname[17],"F");
+    sprintf(list_keyname[18],"G");
+    sprintf(list_keyname[19],"H");
+    sprintf(list_keyname[20],"I");
+    sprintf(list_keyname[21],"J");
+    sprintf(list_keyname[22],"K");
+    sprintf(list_keyname[23],"L");
+    sprintf(list_keyname[24],"N");
+    sprintf(list_keyname[25],"O");
+    sprintf(list_keyname[26],"Q");//A
+    sprintf(list_keyname[27],"R");
+    sprintf(list_keyname[28],"S");
+    sprintf(list_keyname[29],"T");
+    sprintf(list_keyname[30],"U");
+    sprintf(list_keyname[31],"V");
+    sprintf(list_keyname[32],"W");//Z
+    sprintf(list_keyname[33],"X");
+    sprintf(list_keyname[34],"Y");
+    sprintf(list_keyname[35],"Z");//w
+    sprintf(list_keyname[36],"LEFT");
+    sprintf(list_keyname[37],"RIGHT");
+    sprintf(list_keyname[38],"M");//semicolomn
+    sprintf(list_keyname[39],"P");
+    return(0);
 }

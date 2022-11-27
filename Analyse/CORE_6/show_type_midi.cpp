@@ -19,6 +19,6 @@ void show_type_midi(int control, const std::string command)
         strcpy(thetypinfo,"");
         break;
     }
-    sprintf(string_last_midi_id,"%s selected is Ch: %d Pitch: %d Typ: %s" ,command.c_str(), miditable[1][control],miditable[2][control],thetypinfo);
-    sprintf(string_shortview_midi,"%s %d/%d",thetypinfo ,miditable[1][control],miditable[2][control]);
+    sprintf(string_last_midi_id,"%s selected is Ch: %d Pitch: %d Typ: %s",command.c_str(), miditable[1][control],miditable[2][control],thetypinfo);
+    sprintf(string_shortview_midi,"%s %d/%d",thetypinfo,miditable[1][control],miditable[2][control]);
 }

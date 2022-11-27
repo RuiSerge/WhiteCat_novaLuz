@@ -1,6 +1,6 @@
 short midi_send_program_change(int lechannel, short prg_)
 {
-     MidiEvPtr eMid;
+    MidiEvPtr eMid;
     if ((eMid = MidiNewEv(typeProgChange)))
     {
         Port(eMid) = 0;

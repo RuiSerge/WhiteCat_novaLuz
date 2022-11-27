@@ -25,8 +25,15 @@ int RetourInfos(int x_info,int y_info)
     petitchiffre.Print(visu_chrono_str,x_info+170,y_info+90);
     petitchiffrerouge.Print(string_Last_Order,x_info, y_info+105);//last order
     diodes_artnet(x_info,y_info+120);
-    if(index_do_light_diode_artnet==1){light_temoin_universe(incoming_universe,x_info,y_info+120);index_do_light_diode_artnet=0;  }
-    if((do_DMX_out[1]==1 && index_init_dmx_ok[1]==1) ) {light_temoin_emission(Univers,x_info,y_info+120);}
+    if(index_do_light_diode_artnet==1)
+    {
+        light_temoin_universe(incoming_universe,x_info,y_info+120);
+        index_do_light_diode_artnet=0;
+    }
+    if((do_DMX_out[1]==1 && index_init_dmx_ok[1]==1) )
+    {
+        light_temoin_emission(Univers,x_info,y_info+120);
+    }
 
 
 

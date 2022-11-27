@@ -15,8 +15,8 @@
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-w" />
 					<Add option="-Wextra" />
-					<Add option="-Wall" />
 					<Add option="-std=c++11" />
 					<Add option="-std=c11" />
 					<Add option="-m32" />
@@ -34,10 +34,18 @@
 				<Option object_output="../build/build-gcc/release-obj" />
 				<Option type="0" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-w" />
+					<Add option="-Wextra" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wall" />
+			<Add option="-w" />
+			<Add option="-std=c++11" />
+			<Add option="-std=c11" />
+			<Add option="-m32" />
 			<Add directory="../dependencies/includes/allegro-4-4-2" />
 			<Add directory="../dependencies/includes/audiere" />
 			<Add directory="../dependencies/includes/Cserial" />
@@ -50,6 +58,8 @@
 			<Add directory="c:/MinGW/include" />
 		</Compiler>
 		<Linker>
+			<Add option="-static-libgcc" />
+			<Add option="-m32" />
 			<Add option="-lopenlayer -lglyph-agl -lfreetype -llogg -lvorbis -lalleggl -ljpgalleg -lalleg44.dll -luser32 -lgdi32 -lglu32 -lopengl32 -lwsock32  -liphlpapi -lpng12.dll -lz -lhpdf" />
 			<Add library="kernel32" />
 			<Add library="comctl32" />

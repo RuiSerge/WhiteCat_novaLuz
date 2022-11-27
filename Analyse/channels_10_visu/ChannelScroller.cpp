@@ -28,29 +28,30 @@ int ChannelScroller( int ScrollX, int ScrollY)
         break;
     case 1:
         Line( Vec2D(ScrollX,ScrollY), Vec2D( ScrollX+10,ScrollY)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "  1 -48" ,ScrollX+25,ScrollY );
+        petitpetitchiffre.Print( "  1 -48",ScrollX+25,ScrollY );
         Line( Vec2D(ScrollX,ScrollY+25), Vec2D( ScrollX+10,ScrollY+25)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( " 49 -96" ,ScrollX+25,ScrollY+25 );
+        petitpetitchiffre.Print( " 49 -96",ScrollX+25,ScrollY+25 );
         Line( Vec2D(ScrollX,ScrollY+50), Vec2D( ScrollX+10,ScrollY+50)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( " 97-144" ,ScrollX+25,ScrollY+50 );
+        petitpetitchiffre.Print( " 97-144",ScrollX+25,ScrollY+50 );
         Line( Vec2D(ScrollX,ScrollY+75), Vec2D( ScrollX+10,ScrollY+75)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "145-192" ,ScrollX+25,ScrollY+75 );
+        petitpetitchiffre.Print( "145-192",ScrollX+25,ScrollY+75 );
         Line( Vec2D(ScrollX,ScrollY+100), Vec2D( ScrollX+10,ScrollY+100)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "193-240" ,ScrollX+25,ScrollY+100 );
+        petitpetitchiffre.Print( "193-240",ScrollX+25,ScrollY+100 );
         Line( Vec2D(ScrollX,ScrollY+125), Vec2D( ScrollX+10,ScrollY+125)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "241-288" ,ScrollX+25,ScrollY+125 );
+        petitpetitchiffre.Print( "241-288",ScrollX+25,ScrollY+125 );
         Line( Vec2D(ScrollX,ScrollY+150), Vec2D( ScrollX+10,ScrollY+150)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "289-336" ,ScrollX+25,ScrollY+150 );
+        petitpetitchiffre.Print( "289-336",ScrollX+25,ScrollY+150 );
         Line( Vec2D(ScrollX,ScrollY+175), Vec2D( ScrollX+10,ScrollY+175)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "337-384" ,ScrollX+25,ScrollY+175 );
+        petitpetitchiffre.Print( "337-384",ScrollX+25,ScrollY+175 );
         Line( Vec2D(ScrollX,ScrollY+200), Vec2D( ScrollX+10,ScrollY+200)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "385-432" ,ScrollX+25,ScrollY+200 );
+        petitpetitchiffre.Print( "385-432",ScrollX+25,ScrollY+200 );
         Line( Vec2D(ScrollX,ScrollY+225), Vec2D( ScrollX+10,ScrollY+225)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "433-480" ,ScrollX+25,ScrollY+225 );
+        petitpetitchiffre.Print( "433-480",ScrollX+25,ScrollY+225 );
         Line( Vec2D(ScrollX,ScrollY+250), Vec2D( ScrollX+10,ScrollY+250)).Draw( CouleurLigne );
-        petitpetitchiffre.Print( "  ->512" ,ScrollX+25,ScrollY+250 );
+        petitpetitchiffre.Print( "  ->512",ScrollX+25,ScrollY+250 );
         break;
-        default: break;
+    default:
+        break;
     }
 
     Rect Curseur_ScrollChannel(Vec2D(ScrollX-10,ScrollY+scroll_channelspace-10),Vec2D(100,20));

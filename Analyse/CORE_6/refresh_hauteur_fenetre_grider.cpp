@@ -17,7 +17,7 @@ int refresh_hauteur_fenetre_grider()
         hauteurGlobalGridviewer=100+(grider_nb_row*size_preview_case);
         break;
     default:
-    break;
+        break;
     }
     if(grider_nb_row>=10)
     {

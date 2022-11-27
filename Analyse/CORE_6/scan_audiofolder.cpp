@@ -16,7 +16,8 @@ int scan_audiofolder()
     if(!al_findfirst("*.*",&f,-1))
     {
         while(!al_findnext(&f))
-        {//18/6/2015 correction christoph  unsigned int a
+        {
+            //18/6/2015 correction christoph  unsigned int a
             int f_name_len = strlen(f.name);
             for(int a=0; a< f_name_len; a++)
             {

@@ -1,0 +1,205 @@
+int visual_numeric_pad (int x_num, int y_num)
+{
+
+
+    Rect NumBackground(Vec2D (x_num, y_num ), Vec2D ( 480,300));
+    NumBackground.SetRoundness(15);
+    NumBackground.SetLineWidth(epaisseur_ligne_fader*3);
+    NumBackground.Draw(CouleurFond);
+    if(window_focus_id==903)
+    {
+        NumBackground.DrawOutline(CouleurFader);
+    }
+    else
+    {
+        NumBackground.DrawOutline(CouleurLigne);
+    }
+    level_wheel(x_num+270,y_num+35,rayon_wheel_level,angle_correction_wheel);
+    for (int loi=0; loi<3; loi++)
+    {
+        Rect MyNum(Vec2D(x_num+10+(70*loi),y_num+16),Vec2D(60,60));
+        MyNum.SetRoundness(7.5);
+        MyNum.SetLineWidth(epaisseur_ligne_fader);
+        MyNum.DrawOutline(CouleurLigne);
+        if( Midi_Faders_Affectation_Type!=0)//config midi
+        {
+            if(mouse_x>x_num+10+(70*loi) && mouse_x<x_num+70+(70*loi) && mouse_y>y_num+16 && mouse_y<y_num+76)
+            {
+                MyNum.DrawOutline(CouleurBlind);
+            }
+        }
+    }
+
+    for (int loi=0; loi<3; loi++)
+    {
+        Rect MyNum(Vec2D(x_num+10+(70*loi),y_num+86),Vec2D(60,60));
+        MyNum.SetRoundness(7.5);
+        MyNum.SetLineWidth(epaisseur_ligne_fader);
+        MyNum.DrawOutline(CouleurLigne);
+        if( Midi_Faders_Affectation_Type!=0)//config midi
+        {
+            if(mouse_x>x_num+10+(70*loi) && mouse_x<x_num+70+(70*loi) && mouse_y>y_num+86 && mouse_y<y_num+146)
+            {
+                MyNum.DrawOutline(CouleurBlind);
+            }
+        }
+    }
+
+    for (int loi=0; loi<3; loi++)
+    {
+        Rect MyNum(Vec2D(x_num+10+(70*loi),y_num+156),Vec2D(60,60));
+        MyNum.SetRoundness(7.5);
+        MyNum.SetLineWidth(epaisseur_ligne_fader);
+        MyNum.DrawOutline(CouleurLigne);
+        if(Midi_Faders_Affectation_Type!=0)//config midi
+        {
+            if(mouse_x>x_num+10+(70*loi) && mouse_x<x_num+70+(70*loi) && mouse_y>y_num+156 && mouse_y<y_num+216)
+            {
+                MyNum.DrawOutline(CouleurBlind);
+            }
+        }
+    }
+    for (int loi=0; loi<3; loi++)
+    {
+        Rect MyNum(Vec2D(x_num+10+(70*loi),y_num+226),Vec2D(60,60));
+        MyNum.SetRoundness(7.5);
+        MyNum.SetLineWidth(epaisseur_ligne_fader);
+        MyNum.DrawOutline(CouleurLigne);
+        if(Midi_Faders_Affectation_Type!=0)//config midi
+        {
+            if(mouse_x>x_num+10+(70*loi) && mouse_x<x_num+70+(70*loi) && mouse_y>y_num+226 && mouse_y<y_num+286)
+            {
+                MyNum.DrawOutline(CouleurBlind);
+            }
+        }
+    }
+
+
+    Rect UPT(Vec2D(x_num+220,y_num+86),Vec2D(100,60));
+    UPT.SetRoundness(7.5);
+    UPT.SetLineWidth(epaisseur_ligne_fader);
+    UPT.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+220 && mouse_x<x_num+320 && mouse_y>y_num+86 && mouse_y<y_num+146)
+        {
+            UPT.DrawOutline(CouleurBlind);
+        }
+    }
+    Rect DOWNT(Vec2D(x_num+220,y_num+156),Vec2D(100,60));
+    DOWNT.SetRoundness(7.5);
+    DOWNT.SetLineWidth(epaisseur_ligne_fader);
+    DOWNT.DrawOutline(CouleurLigne);
+    if(Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+220 && mouse_x<x_num+320 && mouse_y>y_num+156 && mouse_y<y_num+216)
+        {
+            DOWNT.DrawOutline(CouleurBlind);
+        }
+    }
+    Rect ENTERT(Vec2D(x_num+220,y_num+226),Vec2D(100,60));
+    ENTERT.SetRoundness(7.5);
+    ENTERT.SetLineWidth(epaisseur_ligne_fader);
+    ENTERT.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+220 && mouse_x<x_num+320 && mouse_y>y_num+226 && mouse_y<y_num+286)
+        {
+            ENTERT.DrawOutline(CouleurBlind);
+        }
+    }
+    Rect MyPlus(Vec2D(x_num+330,y_num+86),Vec2D(60,60));
+    MyPlus.SetRoundness(7.5);
+    MyPlus.SetLineWidth(epaisseur_ligne_fader);
+    MyPlus.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+86 && mouse_y<y_num+146)
+        {
+            MyPlus.DrawOutline(CouleurBlind);
+        }
+    }
+    Rect MyMinus(Vec2D(x_num+330,y_num+156),Vec2D(60,60));
+    MyMinus.SetRoundness(7.5);
+    MyMinus.SetLineWidth(epaisseur_ligne_fader);
+    MyMinus.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+156 && mouse_y<y_num+216)
+        {
+            MyMinus.DrawOutline(CouleurBlind);
+        }
+    }
+
+    Rect AtFull(Vec2D(x_num+330,y_num+230),Vec2D(60,20));
+    AtFull.SetRoundness(7.5);
+    AtFull.SetLineWidth(epaisseur_ligne_fader);
+    AtFull.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+230 && mouse_y<y_num+250)
+        {
+            AtFull.DrawOutline(CouleurBlind);
+        }
+    }
+
+    Rect AtZ(Vec2D(x_num+330,y_num+265),Vec2D(60,20));
+    AtZ.SetRoundness(7.5);
+    AtZ.SetLineWidth(epaisseur_ligne_fader);
+    AtZ.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+265 && mouse_y<y_num+285)
+        {
+            AtZ.DrawOutline(CouleurBlind);
+        }
+    }
+
+    Rect CheckM(Vec2D(x_num+330,y_num+15),Vec2D(55,20));
+    CheckM.SetRoundness(7.5);
+    CheckM.SetLineWidth(epaisseur_ligne_fader);
+    CheckM.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+15 && mouse_y<y_num+35)
+        {
+            CheckM.DrawOutline(CouleurBlind);
+        }
+    }
+    Rect CheckP(Vec2D(x_num+330,y_num+45),Vec2D(55,20));
+    CheckP.SetRoundness(7.5);
+    CheckP.SetLineWidth(epaisseur_ligne_fader);
+    CheckP.DrawOutline(CouleurLigne);
+    if( Midi_Faders_Affectation_Type!=0)//config midi
+    {
+        if(mouse_x>x_num+330 && mouse_x<x_num+390 && mouse_y>y_num+45 && mouse_y<y_num+65)
+        {
+            CheckP.DrawOutline(CouleurBlind);
+        }
+    }
+
+    petitchiffre.Print("CHECK -",x_num+332, y_num+25);
+    petitchiffre.Print("CHECK +",x_num+332, y_num+55);
+
+    doom.Print("1",x_num+30, y_num+55);
+    doom.Print("2",x_num+100, y_num+55);
+    doom.Print("3",x_num+170, y_num+55);
+    doom.Print("4",x_num+30, y_num+125);
+    doom.Print("5",x_num+100, y_num+125);
+    doom.Print("6",x_num+170, y_num+125);
+    doom.Print("7",x_num+30, y_num+195);
+    doom.Print("8",x_num+100, y_num+195);
+    doom.Print("9",x_num+170, y_num+195);
+    doom.Print("0",x_num+30, y_num+265);
+    doom.Print(".",x_num+105, y_num+265);
+    doom.Print("C",x_num+165, y_num+265);
+    doom.Print("up",x_num+250, y_num+125);
+    doom.Print("down",x_num+230, y_num+195);
+    doom.Print("AT",x_num+245, y_num+265);
+    doom.Print("+",x_num+350, y_num+125);
+    doom.Print("-",x_num+350, y_num+195);
+    petitchiffre.Print("AT FULL",x_num+333, y_num+245);
+    petitchiffre.Print("AT ZERO",x_num+333, y_num+280);
+
+    return(0);
+}

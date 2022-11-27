@@ -32,8 +32,10 @@ int attribute_midi_solo_affectation(int faderis, int modeaction)
         miditable[2][faderis]=ispitch;
     }
 
-if( index_midi_affectation_autoclose==1)
-    {Midi_Faders_Affectation_Type=0;}
+    if( index_midi_affectation_autoclose==1)
+    {
+        Midi_Faders_Affectation_Type=0;
+    }
 
     return(0);
 }

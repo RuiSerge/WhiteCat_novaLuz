@@ -6894,3 +6894,699 @@
 1669071904 source:d:\dev\c++\sourceapplication\github_ruiserge_whitecat_nova_luz\src\hotkey\whc_hk_connector.cpp
 	"whc_hk_connector.h"
 
+1669467824 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_apply.cpp
+	"whc_hk_apply.h"
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_apply.h
+	"whc_hk_input.h"
+	<string>
+	<vector>
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_input.h
+	<allegro/keyboard.h>
+	<string>
+	<vector>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\keyboard.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\base.h
+	<errno.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"internal/alconfig.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\internal\alconfig.h
+	"allegro/platform/alplatf.h"
+	"allegro/platform/aldjgpp.h"
+	"allegro/platform/alwatcom.h"
+	"allegro/platform/almngw32.h"
+	"allegro/platform/aldmc.h"
+	"allegro/platform/albcc32.h"
+	"allegro/platform/almsvc.h"
+	"allegro/platform/albecfg.h"
+	"allegro/platform/albecfg.h"
+	"allegro/platform/almaccfg.h"
+	"allegro/platform/alosxcfg.h"
+	"allegro/platform/alqnxcfg.h"
+	"allegro/platform/alucfg.h"
+	"allegro/platform/alpspcfg.h"
+	"allegro/platform/astdint.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alplatf.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\aldjgpp.h
+	<pc.h>
+	<dir.h>
+	<dpmi.h>
+	<go32.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/farptr.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\aldmc.h
+	<io.h>
+	<fcntl.h>
+	<stdint.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\albecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\almaccfg.h
+	<MacTypes.h>
+	<QuickDraw.h>
+	<FCntl.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alosxcfg.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alqnxcfg.h
+	<stdio.h>
+	<stdlib.h>
+	<fcntl.h>
+	<unistd.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"allegro/platform/alunixac.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\alpspcfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1669550058 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_connector.cpp
+	"whc_hk_connector.h"
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_connector.h
+	<allegro/keyboard.h>
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<algorithm>
+	<./hotkey/whc_hk_input.h>
+	<./hotkey/whc_hk_apply.h>
+	<./toolbox/whc_toolbox.h>
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\toolbox\whc_toolbox.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstdlib>
+	<windows.h>
+	<algorithm>
+	<functional>
+	<cctype>
+	<locale>
+
+1669467824 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\hotkey\whc_hk_input.cpp
+	"whc_hk_input.h"
+
+1669467824 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\mouse\whc_mouse.cpp
+	"whc_mouse.h"
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\mouse\whc_mouse.h
+	<allegro/mouse.h>
+	<allegro/keyboard.h>
+	<OpenLayer.hpp>
+	<time.h>
+	<vector>
+	"boost/date_time/local_time/local_time.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\mouse.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer.hpp
+	"OpenLayer/GarbageCollector.hpp"
+	"OpenLayer/Includes.hpp"
+	"OpenLayer/Animation.hpp"
+	"OpenLayer/Bitmap.hpp"
+	"OpenLayer/Blenders.hpp"
+	"OpenLayer/FpsCounter.hpp"
+	"OpenLayer/GarbageCollector.hpp"
+	"OpenLayer/General.hpp"
+	"OpenLayer/Rgba.hpp"
+	"OpenLayer/Settings.hpp"
+	"OpenLayer/Setup.hpp"
+	"OpenLayer/TextRenderer.hpp"
+	"OpenLayer/Transforms.hpp"
+	"OpenLayer/Canvas.hpp"
+	"OpenLayer/RenderModes.hpp"
+	"OpenLayer/Shape.hpp"
+	"OpenLayer/TexturedPoly.hpp"
+	"OpenLayer/Polygon.hpp"
+	"OpenLayer/Line.hpp"
+	"OpenLayer/Rectangle.hpp"
+	"OpenLayer/Circle.hpp"
+	"OpenLayer/LineStrip.hpp"
+	"OpenLayer/Point.hpp"
+	"OpenLayer/Vec2D.hpp"
+	"OpenLayer/TextureInfo.hpp"
+	"OpenLayer/Declspec.hpp"
+	"OpenLayer/loadpng.h"
+	"OpenLayer/GfxRend.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\garbagecollector.hpp
+	<list>
+	"Includes.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\includes.hpp
+	"Declspec.hpp"
+	<allegro.h>
+	<alleggl.h>
+	<string>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\declspec.hpp
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro.h
+	"allegro/base.h"
+	"allegro/system.h"
+	"allegro/debug.h"
+	"allegro/unicode.h"
+	"allegro/mouse.h"
+	"allegro/timer.h"
+	"allegro/keyboard.h"
+	"allegro/joystick.h"
+	"allegro/palette.h"
+	"allegro/gfx.h"
+	"allegro/color.h"
+	"allegro/draw.h"
+	"allegro/rle.h"
+	"allegro/compiled.h"
+	"allegro/text.h"
+	"allegro/font.h"
+	"allegro/fli.h"
+	"allegro/config.h"
+	"allegro/gui.h"
+	"allegro/sound.h"
+	"allegro/file.h"
+	"allegro/lzss.h"
+	"allegro/datafile.h"
+	"allegro/fixed.h"
+	"allegro/fmaths.h"
+	"allegro/matrix.h"
+	"allegro/quat.h"
+	"allegro/3d.h"
+	"allegro/3dmaths.h"
+	"allegro/alcompat.h"
+	"allegro/fix.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\system.h
+	"base.h"
+	"unicode.h"
+	"config.h"
+	"inline/system.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\unicode.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\config.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\system.inl
+	"allegro/debug.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\debug.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\timer.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\joystick.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\palette.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\gfx.h
+	"3d.h"
+	"base.h"
+	"fixed.h"
+	"inline/gfx.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\3d.h
+	"base.h"
+	"fixed.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\fixed.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\gfx.inl
+	"allegro/debug.h"
+	"asm.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\asm.inl
+	"allegro/platform/al386gcc.h"
+	"allegro/platform/al386vc.h"
+	"allegro/platform/al386wat.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\al386gcc.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\al386vc.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\platform\al386wat.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\color.h
+	"base.h"
+	"palette.h"
+	"inline/color.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\color.inl
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\draw.h
+	"base.h"
+	"fixed.h"
+	"gfx.h"
+	"inline/draw.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\draw.inl
+	"allegro/debug.h"
+	"allegro/3d.h"
+	"gfx.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\rle.h
+	"base.h"
+	"gfx.h"
+	"inline/rle.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\rle.inl
+	"allegro/debug.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\compiled.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\text.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\font.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\fli.h
+	"base.h"
+	"palette.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\gui.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\sound.h
+	"base.h"
+	"digi.h"
+	"stream.h"
+	"midi.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\digi.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\stream.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\midi.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\file.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\lzss.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\datafile.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\fmaths.h
+	"base.h"
+	"fixed.h"
+	"inline/fmaths.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\fmaths.inl
+	"asm.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\matrix.h
+	"base.h"
+	"fixed.h"
+	"fmaths.h"
+	"inline/matrix.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\matrix.inl
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\quat.h
+	"base.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\3dmaths.h
+	"base.h"
+	"fixed.h"
+	"inline/3dmaths.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\3dmaths.inl
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\alcompat.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\fix.h
+	"fixed.h"
+	"fmaths.h"
+	"inline/fix.inl"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\inline\fix.inl
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\alleggl.h
+	<allegro.h>
+	<winalleg.h>
+	<OpenGL/OpenGL.h>
+	<OpenGL/gl.h>
+	<OpenGL/glext.h>
+	<GL/gl.h>
+	"allegrogl/gl_ext.h"
+	"allegrogl/alleggl_config.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\winalleg.h
+	<afxwin.h>
+	<windows.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\gl_ext.h
+	"allegrogl/gl_header_detect.h"
+	"allegrogl/GLext/gl_ext_defs.h"
+	"allegrogl/GLext/wgl_ext_defs.h"
+	"allegrogl/GLext/glx_ext_defs.h"
+	"allegrogl/GLext/gl_ext_api.h"
+	"allegrogl/GLext/wgl_ext_api.h"
+	"allegrogl/GLext/glx_ext_api.h"
+	"allegrogl/GLext/gl_ext_alias.h"
+	"allegrogl/GLext/gl_ext_api.h"
+	"allegrogl/GLext/wgl_ext_alias.h"
+	"allegrogl/GLext/wgl_ext_api.h"
+	"allegrogl/GLext/glx_ext_alias.h"
+	"allegrogl/GLext/glx_ext_api.h"
+	"allegrogl/GLext/gl_ext_list.h"
+	"allegrogl/GLext/glx_ext_list.h"
+	"allegrogl/GLext/wgl_ext_list.h"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\gl_header_detect.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\gl_ext_defs.h
+	<stddef.h>
+	<stddef.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\wgl_ext_defs.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\glx_ext_defs.h
+	<GL/glx.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\gl_ext_api.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\wgl_ext_api.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\glx_ext_api.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\gl_ext_alias.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\wgl_ext_alias.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\glx_ext_alias.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\gl_ext_list.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\glx_ext_list.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\glext\wgl_ext_list.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\allegrogl\alleggl_config.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\animation.hpp
+	"Includes.hpp"
+	"Bitmap.hpp"
+	"Declspec.hpp"
+	<vector>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\bitmap.hpp
+	"Includes.hpp"
+	"GarbageCollector.hpp"
+	"Rgba.hpp"
+	"Internal.hpp"
+	"PendingLoad.hpp"
+	"Collisions.hpp"
+	"Vec2D.hpp"
+	"RenderModes.hpp"
+	"GlDriver.hpp"
+	"Declspec.hpp"
+	<vector>
+	<string>
+	<math.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\rgba.hpp
+	"Includes.hpp"
+	"Transforms.hpp"
+	"Declspec.hpp"
+	<string>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\transforms.hpp
+	"Includes.hpp"
+	"Vec2D.hpp"
+	"Placement.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\vec2d.hpp
+	<cmath>
+	<string>
+	<sstream>
+	"General.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\general.hpp
+	<sstream>
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\placement.hpp
+	"Matrix.hpp"
+	"Vec2D.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\matrix.hpp
+	"Vec2D.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\internal.hpp
+	"Includes.hpp"
+	<string>
+	<math.h>
+	<fstream>
+	<iostream>
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\pendingload.hpp
+	"Includes.hpp"
+	"GarbageCollector.hpp"
+	"TextureInfo.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\textureinfo.hpp
+	"Includes.hpp"
+	"Vec2D.hpp"
+	"Rgba.hpp"
+	"OlRectangle.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\olrectangle.hpp
+	<cmath>
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\collisions.hpp
+	"Vec2D.hpp"
+	"Declspec.hpp"
+	<utility>
+	<vector>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\rendermodes.hpp
+	"Rgba.hpp"
+	"TextureInfo.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\gldriver.hpp
+	"Includes.hpp"
+	"Internal.hpp"
+	"Vec2D.hpp"
+	"Setup.hpp"
+	"Rgba.hpp"
+	"Declspec.hpp"
+	<string>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\setup.hpp
+	"Includes.hpp"
+	"Declspec.hpp"
+	<string>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\blenders.hpp
+	"Includes.hpp"
+	"Declspec.hpp"
+	<stack>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\fpscounter.hpp
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\settings.hpp
+	"Includes.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\textrenderer.hpp
+	"Includes.hpp"
+	"Rgba.hpp"
+	"GarbageCollector.hpp"
+	"General.hpp"
+	"Declspec.hpp"
+	"Glyph.hpp"
+	<glyph.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\glyph.hpp
+	<math.h>
+	<map>
+	"Rgba.hpp"
+	"Bitmap.hpp"
+	"Point.hpp"
+	"Canvas.hpp"
+	"Declspec.hpp"
+	<ft2build.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\point.hpp
+	"Shape.hpp"
+	"Vec2D.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\shape.hpp
+	"Includes.hpp"
+	"Rgba.hpp"
+	"Vec2D.hpp"
+	"Collisions.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\canvas.hpp
+	"Includes.hpp"
+	"Bitmap.hpp"
+	"Rectangle.hpp"
+	"OlRectangle.hpp"
+	"Declspec.hpp"
+	<stack>
+	<map>
+	<string>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\rectangle.hpp
+	"Shape.hpp"
+	"Point.hpp"
+	"Settings.hpp"
+	"Polygon.hpp"
+	"Declspec.hpp"
+	<cmath>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\polygon.hpp
+	"RawLineStrip.hpp"
+	"Vec2D.hpp"
+	"Rgba.hpp"
+	"Internal.hpp"
+	"General.hpp"
+	"Shape.hpp"
+	"Placement.hpp"
+	"Collisions.hpp"
+	"LineStrip.hpp"
+	"Line.hpp"
+	"Declspec.hpp"
+	<vector>
+	"Internal.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\rawlinestrip.hpp
+	"Rgba.hpp"
+	"Bitmap.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\linestrip.hpp
+	"Shape.hpp"
+	"Vec2D.hpp"
+	"Placement.hpp"
+	"Line.hpp"
+	"RawLineStrip.hpp"
+	"Declspec.hpp"
+	<list>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\line.hpp
+	"Shape.hpp"
+	"Vec2D.hpp"
+	"Settings.hpp"
+	"Declspec.hpp"
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\glyph.h
+	<allegro.h>
+	<allegro/internal/aintern.h>
+	<SDL/SDL.h>
+	<stdio.h>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\allegro-4-4-2\allegro\internal\aintern.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\texturedpoly.hpp
+	"Polygon.hpp"
+	"Vec2D.hpp"
+	"Declspec.hpp"
+	<vector>
+	<utility>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\circle.hpp
+	"Shape.hpp"
+	"Settings.hpp"
+	"Rgba.hpp"
+	"Placement.hpp"
+	"Declspec.hpp"
+	<cmath>
+	<vector>
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\loadpng.h
+
+1669467821 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\dependencies\includes\misc\openlayer\gfxrend.hpp
+	"Includes.hpp"
+	"Rgba.hpp"
+	"Settings.hpp"
+	"Declspec.hpp"
+
+1669467824 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\toolbox\whc_report.cpp
+	"whc_report.h"
+
+1669467824 d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\toolbox\whc_report.h
+	<list>
+	<string>
+
+1669467824 source:d:\dev\c++\sourceapplication\_whitecat_novaluz\whitecat_novaluz\src\toolbox\whc_toolbox.cpp
+	"whc_toolbox.h"
+

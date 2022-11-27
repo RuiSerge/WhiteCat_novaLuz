@@ -45,7 +45,8 @@ int refresh_minifader_state_view_core(int cmptfader)
     case 12:
         sprintf(str_tmp_minidock_dock,"GridPl.%d",(faders_dock_grid_affectation[cmptfader][dokmin]+1));
         break;
-     default:break;
+    default:
+        break;
     }
     sprintf(str_minifader_feedback[1],"Dock %d %s",(dokmin+1),str_tmp_minidock_dock);
 
@@ -62,7 +63,8 @@ int refresh_minifader_state_view_core(int cmptfader)
     case 2:
         sprintf(report_minifader_str,"Status: Down");
         break;
-    default: break;
+    default:
+        break;
     }
 
     if(lfo_mode_is[cmptfader]==0 && lfo_cycle_is_on[cmptfader]==1)
@@ -104,7 +106,8 @@ int refresh_minifader_state_view_core(int cmptfader)
         case 1:
             niv=LevelStopPos[cmptfader];
             break;
-         default:break;
+        default:
+            break;
         }
         sprintf(string_fader_stop_pos[cmptfader],"%d",niv);
         sprintf(str_minifader_feedback[9],"Stop Pos ON: %d",niv);

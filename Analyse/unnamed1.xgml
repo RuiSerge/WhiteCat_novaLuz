@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<section name="xgml">
+	<attribute key="Creator" type="String">yFiles</attribute>
+	<attribute key="Version" type="String">2.18</attribute>
+	<section name="graph">
+		<attribute key="hierarchic" type="int">1</attribute>
+		<attribute key="label" type="String"></attribute>
+		<attribute key="directed" type="int">1</attribute>
+		<section name="node">
+			<attribute key="id" type="int">0</attribute>
+			<attribute key="label" type="String"></attribute>
+			<section name="graphics">
+				<attribute key="x" type="double">900.0</attribute>
+				<attribute key="y" type="double">378.0</attribute>
+				<attribute key="w" type="double">80.0</attribute>
+				<attribute key="h" type="double">40.0</attribute>
+				<attribute key="customconfiguration" type="String">com.yworks.flowchart.predefinedProcess</attribute>
+				<attribute key="fill" type="String">#E8EEF7</attribute>
+				<attribute key="fill2" type="String">#B7C9E3</attribute>
+				<attribute key="outline" type="String">#000000</attribute>
+			</section>
+			<section name="LabelGraphics">
+			</section>
+		</section>
+	</section>
+</section>

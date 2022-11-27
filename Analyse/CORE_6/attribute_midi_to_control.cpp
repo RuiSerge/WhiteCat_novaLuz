@@ -53,13 +53,16 @@ int attribute_midi_to_control(int faderis, int typaction, int modeaction)
                     miditable[2][faderis+h]=ispitch;
                 }
                 break;
-            default:break;
+            default:
+                break;
             }
         }
     }
 
-if( index_midi_affectation_autoclose==1)
-    {Midi_Faders_Affectation_Type=0;}
+    if( index_midi_affectation_autoclose==1)
+    {
+        Midi_Faders_Affectation_Type=0;
+    }
 
 
     return(0);

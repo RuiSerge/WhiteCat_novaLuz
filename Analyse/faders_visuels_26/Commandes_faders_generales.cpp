@@ -35,7 +35,8 @@ int Commandes_faders_generales(int xf, int yf)
         case 7:
             petitchiffre.Print("RECALL",xf+5,yf+15+(50*u));
             break;
-        default: break;
+        default:
+            break;
         }
 
         if(window_focus_id==W_MINIFADERS && Midi_Faders_Affectation_Type!=0 && mouse_x>xf && mouse_x<xf+72 && mouse_y>yf+(50*u) && mouse_y<yf+(50*u)+25)

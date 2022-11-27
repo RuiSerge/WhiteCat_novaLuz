@@ -24,7 +24,7 @@ int generate_channel_preview_patch_list()//affichage du premier grada
                     show_more_than_one_dim[ch]=1;
                     break;
                 default:
-                break;
+                    break;
                 }
             }
 

@@ -11,7 +11,8 @@ int set_time_cursor_to_time_type(int the_time_wheel_datatype)
     case 2://dixiemes
         angle_timesnap=angle_timesnap_dix;
         break;
-     default:break;
+    default:
+        break;
     }
     time_angle=angle_timesnap;
     refresh_time_cursor();

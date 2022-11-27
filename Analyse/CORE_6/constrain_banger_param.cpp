@@ -127,7 +127,7 @@ int constrain_banger_param(int lp)
         }
         break;
     default:
-    break;
+        break;
     }
 
     return(0);

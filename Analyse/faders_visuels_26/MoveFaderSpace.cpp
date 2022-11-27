@@ -50,7 +50,7 @@ int MoveFaderSpace(int ydelimitation)
                     sprintf(thetypinfo,"-");
                     break;
                 }
-                sprintf(string_last_midi_id,"MoveFaderSpace LR is Ch: %d Pitch: %d Typ: %s" , miditable[1][767],miditable[2][767],thetypinfo);
+                sprintf(string_last_midi_id,"MoveFaderSpace LR is Ch: %d Pitch: %d Typ: %s", miditable[1][767],miditable[2][767],thetypinfo);
             }
         }
         if(  mouse_x>scroll_faderspace+50 && mouse_x<scroll_faderspace+100  )
@@ -74,7 +74,7 @@ int MoveFaderSpace(int ydelimitation)
                 sprintf(thetypinfo,"-");
                 break;
             }
-            sprintf(string_last_midi_id,"MoveFaderSpace UP is Ch: %d Pitch: %d Typ: %s" , miditable[1][1635],miditable[2][1635],thetypinfo);
+            sprintf(string_last_midi_id,"MoveFaderSpace UP is Ch: %d Pitch: %d Typ: %s", miditable[1][1635],miditable[2][1635],thetypinfo);
         }
     }
 
@@ -103,14 +103,14 @@ int MoveFaderSpace(int ydelimitation)
     Line( Vec2D( 832, ydelimitation ), Vec2D( 832,ydelimitation+10)).Draw( CouleurLigne );
     Line( Vec2D( 885, ydelimitation ), Vec2D( 885,ydelimitation+10)).Draw( CouleurLigne );
 
-    petitchiffre.Print( "1-6" ,75,ydelimitation+15 );
-    petitchiffre.Print( "7-12" ,187,ydelimitation+15);
-    petitchiffre.Print( "13-18" ,296,ydelimitation+15);
-    petitchiffre.Print( "19-24" ,405,ydelimitation+15);
-    petitchiffre.Print( "25-30" ,514,ydelimitation+15);
-    petitchiffre.Print( "31-36" ,623,ydelimitation+15);
-    petitchiffre.Print( "37-42" ,732,ydelimitation+15);
-    petitchiffre.Print( "43-48" ,842,ydelimitation+15);
+    petitchiffre.Print( "1-6",75,ydelimitation+15 );
+    petitchiffre.Print( "7-12",187,ydelimitation+15);
+    petitchiffre.Print( "13-18",296,ydelimitation+15);
+    petitchiffre.Print( "19-24",405,ydelimitation+15);
+    petitchiffre.Print( "25-30",514,ydelimitation+15);
+    petitchiffre.Print( "31-36",623,ydelimitation+15);
+    petitchiffre.Print( "37-42",732,ydelimitation+15);
+    petitchiffre.Print( "43-48",842,ydelimitation+15);
 
 
 

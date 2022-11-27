@@ -57,13 +57,14 @@ void write_text_to_log_file( const std::string &text )
     std::ofstream log_file(
         "log_file.txt", std::ios_base::out | std::ios_base::app );
 
-    log_file << text ;    log_file << "\n";
+    log_file << text ;
+    log_file << "\n";
 }
 
 
 void clear_log_file()
 {
-     std::ofstream log_file("log_file.txt", std::ios_base::out | std::ios_base::trunc );
+    std::ofstream log_file("log_file.txt", std::ios_base::out | std::ios_base::trunc );
 
     char buff[20];
     struct tm *sTm;
@@ -79,19 +80,31 @@ void clear_log_file()
 
 int return_lowest(int data1, int data2)
 {
- int lowest_is;
- if (data1>data2){lowest_is=data2;}
- else {lowest_is=data1;}
- return(lowest_is);
+    int lowest_is;
+    if (data1>data2)
+    {
+        lowest_is=data2;
+    }
+    else
+    {
+        lowest_is=data1;
+    }
+    return(lowest_is);
 }
 
 
 int return_highest(int data1, int data2)
 {
- int highest_is;
- if (data1>data2){highest_is=data1;}
- else {highest_is=data2;}
- return(highest_is);
+    int highest_is;
+    if (data1>data2)
+    {
+        highest_is=data1;
+    }
+    else
+    {
+        highest_is=data2;
+    }
+    return(highest_is);
 }
 
 
@@ -129,16 +142,20 @@ int constrain_data_to_midi_range(int valeur)
 //18/07/2015
 int unselect_ch_and_symbols()
 {
-             for (int ci=1;ci<514;ci++)
-             {  Selected_Channel[ci]=0;
-                for(int calc=0;calc<4;calc++)
-                    {
-                         for (int i=0;i<nbre_symbol_per_layer;i++)
-                        {symbol_is_selected[calc][i]=0;}
-                    }
-             }
-             last_ch_selected=0;
-             index_type=0;index_level_attribue=0;
+    for (int ci=1; ci<514; ci++)
+    {
+        Selected_Channel[ci]=0;
+        for(int calc=0; calc<4; calc++)
+        {
+            for (int i=0; i<nbre_symbol_per_layer; i++)
+            {
+                symbol_is_selected[calc][i]=0;
+            }
+        }
+    }
+    last_ch_selected=0;
+    index_type=0;
+    index_level_attribue=0;
 
 
 
@@ -148,103 +165,131 @@ int unselect_ch_and_symbols()
 
 int reset_temp_state_for_channel_macros_launch()
 {
- for(int i=0;i<514;i++)
- {
-     previous_state_of_outputted_channels[i]=-1;
- }
-return(0);
+    for(int i=0; i<514; i++)
+    {
+        previous_state_of_outputted_channels[i]=-1;
+    }
+    return(0);
 }
 
 int fader_set_level(int cmptfader, int val)
 {
-switch(fader_damper_is_on[cmptfader])
-{
-case 0:
-Fader[cmptfader]=val;
-midi_levels[cmptfader]=(Fader[cmptfader]/2);
-Fader_dampered[cmptfader].fix_all_damper_state_value(val);
-Fader_dampered[cmptfader].set_target_val(val);
-break;
-case 1:
-Fader_dampered[cmptfader].set_target_val(val);
-index_fader_is_manipulated[cmptfader]=1;
-break;
-default:
-break;
-}
+    switch(fader_damper_is_on[cmptfader])
+    {
+    case 0:
+        Fader[cmptfader]=val;
+        midi_levels[cmptfader]=(Fader[cmptfader]/2);
+        Fader_dampered[cmptfader].fix_all_damper_state_value(val);
+        Fader_dampered[cmptfader].set_target_val(val);
+        break;
+    case 1:
+        Fader_dampered[cmptfader].set_target_val(val);
+        index_fader_is_manipulated[cmptfader]=1;
+        break;
+    default:
+        break;
+    }
 
-index_fader_is_manipulated[cmptfader]=1;midi_levels[cmptfader]=(Fader[cmptfader]/2);
-if(midi_send_out[cmptfader]==1){ index_send_midi_out[cmptfader]=1;}
-return(0);
+    index_fader_is_manipulated[cmptfader]=1;
+    midi_levels[cmptfader]=(Fader[cmptfader]/2);
+    if(midi_send_out[cmptfader]==1)
+    {
+        index_send_midi_out[cmptfader]=1;
+    }
+    return(0);
 }
 
 
 //christoph 14/04/14 avoiding clippling on stop
 int player1_do_stop()//fade out to avoid clipping in sound when stopping
 {
-float value_lecteur=(((float)player_niveauson[0])/127);
-for(float i=value_lecteur*30; i>0.0;i--)
-{
-if(i>=0.0){player1->setVolume(i/30);}
-}
-player1->setVolume(0.0);
-player1->stop();
-for(float i=value_lecteur*30; i<1.0;i++)
-{
-if(i<1.0){player1->setVolume(i/30);}
-}
-player1->setVolume(value_lecteur);
-return(0);
+    float value_lecteur=(((float)player_niveauson[0])/127);
+    for(float i=value_lecteur*30; i>0.0; i--)
+    {
+        if(i>=0.0)
+        {
+            player1->setVolume(i/30);
+        }
+    }
+    player1->setVolume(0.0);
+    player1->stop();
+    for(float i=value_lecteur*30; i<1.0; i++)
+    {
+        if(i<1.0)
+        {
+            player1->setVolume(i/30);
+        }
+    }
+    player1->setVolume(value_lecteur);
+    return(0);
 }
 
 int player2_do_stop()//fade out to avoid clipping in sound when stopping
 {
-float value_lecteur=(((float)player_niveauson[1])/127);
-for(float i=value_lecteur*30; i>0.0;i--)
-{
-if(i>=0.0){player2->setVolume(i/30);}
-}
-player2->setVolume(0.0);
-player2->stop();
-for(float i=value_lecteur*30; i<1.0;i++)
-{
-if(i<1.0){player2->setVolume(i/30);}
-}
-player2->setVolume(value_lecteur);
-return(0);
+    float value_lecteur=(((float)player_niveauson[1])/127);
+    for(float i=value_lecteur*30; i>0.0; i--)
+    {
+        if(i>=0.0)
+        {
+            player2->setVolume(i/30);
+        }
+    }
+    player2->setVolume(0.0);
+    player2->stop();
+    for(float i=value_lecteur*30; i<1.0; i++)
+    {
+        if(i<1.0)
+        {
+            player2->setVolume(i/30);
+        }
+    }
+    player2->setVolume(value_lecteur);
+    return(0);
 }
 
 int player3_do_stop()//fade out to avoid clipping in sound when stopping
 {
-float value_lecteur=(((float)player_niveauson[2])/127);
-for(float i=value_lecteur*30; i>0.0;i--)
-{
-if(i>=0.0){player3->setVolume(i/30);}
-}
-player3->setVolume(0.0);
-player3->stop();
-for(float i=value_lecteur*30; i<1.0;i++)
-{
-if(i<1.0){player3->setVolume(i/30);}
-}
-player3->setVolume(value_lecteur);
-return(0);
+    float value_lecteur=(((float)player_niveauson[2])/127);
+    for(float i=value_lecteur*30; i>0.0; i--)
+    {
+        if(i>=0.0)
+        {
+            player3->setVolume(i/30);
+        }
+    }
+    player3->setVolume(0.0);
+    player3->stop();
+    for(float i=value_lecteur*30; i<1.0; i++)
+    {
+        if(i<1.0)
+        {
+            player3->setVolume(i/30);
+        }
+    }
+    player3->setVolume(value_lecteur);
+    return(0);
 }
 int player4_do_stop()//fade out to avoid clipping in sound when stopping
 {
-float value_lecteur=(((float)player_niveauson[3])/127);
-for(float i=value_lecteur*30; i>0.0;i--)
-{
-if(i>=0.0){player4->setVolume(i/30);}
-}
-player4->setVolume(0.0);
-player4->stop();
-for(float i=value_lecteur*30; i<1.0;i++)
-{
-if(i<1.0){player4->setVolume(i/30);}
-}
-player4->setVolume(value_lecteur);
-return(0);
+    float value_lecteur=(((float)player_niveauson[3])/127);
+    for(float i=value_lecteur*30; i>0.0; i--)
+    {
+        if(i>=0.0)
+        {
+            player4->setVolume(i/30);
+        }
+    }
+    player4->setVolume(0.0);
+    player4->stop();
+    for(float i=value_lecteur*30; i<1.0; i++)
+    {
+        if(i<1.0)
+        {
+            player4->setVolume(i/30);
+        }
+    }
+    player4->setVolume(value_lecteur);
+    return(0);
 }
 
 
@@ -278,82 +323,86 @@ int constrain_int_data_to_this_range(int data, int min, int max)
 
 int set_new_values_in_wave()
 {
-int _index=0;
-for(int i=waver_control;i<26;i++)//vers la droite
-{
+    int _index=0;
+    for(int i=waver_control; i<26; i++) //vers la droite
+    {
         if(lead_brush_reading[brush_selected]+_index<26)
-            {
+        {
             Wave_Dampered[i].set_target_val(255*brush_slots[brush_selected][lead_brush_reading[brush_selected]+_index]);
             _index++;
-            }
-            if(lead_brush_reading[brush_selected]+_index>=26)
-            {break;}
-}
+        }
+        if(lead_brush_reading[brush_selected]+_index>=26)
+        {
+            break;
+        }
+    }
 
 
-_index=0;
-for(int i=waver_control;i>=0;i--)//vers la gauche
-{
+    _index=0;
+    for(int i=waver_control; i>=0; i--) //vers la gauche
+    {
 
-            if(lead_brush_reading[brush_selected]-_index<0)//protection
-            {break;}
-            if(lead_brush_reading[brush_selected]-_index>=0)
-            {
+        if(lead_brush_reading[brush_selected]-_index<0)//protection
+        {
+            break;
+        }
+        if(lead_brush_reading[brush_selected]-_index>=0)
+        {
             Wave_Dampered[i].set_target_val(255*brush_slots[brush_selected][lead_brush_reading[brush_selected]-_index]);
             _index++;
-            }
-}
-return(0);
+        }
+    }
+    return(0);
 }
 
 
 int clear_wave_buffer()
 {
-for(int i=0; i<512;i++)
+    for(int i=0; i<512; i++)
     {
-       buffer_wave[i]=0;
+        buffer_wave[i]=0;
     }
-return(0);
+    return(0);
 }
 
 
 
 int clear_wave_brush(int preset)
 {
-for(int i=0; i<26;i++)
+    for(int i=0; i<26; i++)
     {
-       brush_slots[preset][i]=0.0;
+        brush_slots[preset][i]=0.0;
     }
-return(0);
+    return(0);
 }
 int clear_wave_slots()
 {
-for(int i=0;i<26;i++)
-{
-    Wave_Dampered[i].set_target_val(0.0);
-}
-return(0);
+    for(int i=0; i<26; i++)
+    {
+        Wave_Dampered[i].set_target_val(0.0);
+    }
+    return(0);
 }
 
 int wave_calculations()
 {
 
-  if(previous_waver_control!=waver_control)
-  {
-   set_new_values_in_wave();
-   previous_waver_control=waver_control;
-  }
+    if(previous_waver_control!=waver_control)
+    {
+        set_new_values_in_wave();
+        previous_waver_control=waver_control;
+    }
 
-return(0);
+    return(0);
 }
 
 int seek_to_beg_wave()
 {
-clear_wave_slots();
-waver_control=0;
-set_new_values_in_wave();
-previous_waver_control=waver_control;
-return(0);
+    clear_wave_slots();
+    waver_control=0;
+    set_new_values_in_wave();
+    previous_waver_control=waver_control;
+    return(0);
 }
 
 int check_echo_bounce_done(int ech)
@@ -433,8 +482,14 @@ int snap_kill_and_bounce(int echo, int f)
         snap_fader_state(echo, f) ;
 
         //si le fader est en train de jouer en LFO, christoph 19/12/14
-        if( lfo_mode_is[f]!=0){lfo_mode_is[f]=0;}
-        if ( lfo_cycle_is_on[f]!=0){lfo_cycle_is_on[f]=0;}
+        if( lfo_mode_is[f]!=0)
+        {
+            lfo_mode_is[f]=0;
+        }
+        if ( lfo_cycle_is_on[f]!=0)
+        {
+            lfo_cycle_is_on[f]=0;
+        }
 
         Fader[f]=0;
         do_bounce[echo]=0;
@@ -948,37 +1003,46 @@ int reset_indexs_confirmation()
 
 int  affect_wave_to_dock(int fd,int dd)
 {
-  DockTypeIs[fd][dd]=17;//WAVE
-  return(0);
+    DockTypeIs[fd][dd]=17;//WAVE
+    return(0);
 }
 
 int do_clock_level_modification(int level)
 {
-switch(clocklevel_absolutemode)
-{
-case 0://relatif
-    if(level<64){
-    midi_BPM+=relativ_encoder_midi_clock_value;
-    ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
-    install_int_ex(ticker_midi_clock , ticker_midi_clock_rate);}
-    else if(level>64){
-    midi_BPM-=relativ_encoder_midi_clock_value;
-    if(midi_BPM<=0){midi_BPM=relativ_encoder_midi_clock_value;}
-    ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
-    install_int_ex(ticker_midi_clock , ticker_midi_clock_rate);
+    switch(clocklevel_absolutemode)
+    {
+    case 0://relatif
+        if(level<64)
+        {
+            midi_BPM+=relativ_encoder_midi_clock_value;
+            ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
+            install_int_ex(ticker_midi_clock, ticker_midi_clock_rate);
+        }
+        else if(level>64)
+        {
+            midi_BPM-=relativ_encoder_midi_clock_value;
+            if(midi_BPM<=0)
+            {
+                midi_BPM=relativ_encoder_midi_clock_value;
+            }
+            ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
+            install_int_ex(ticker_midi_clock, ticker_midi_clock_rate);
+        }
+        break;
+    case 1://absolute , on récupère de toute facon le niveau midi comme base
+        midi_BPM=relativ_encoder_midi_clock_value*level;
+        if(midi_BPM<=0)
+        {
+            midi_BPM=relativ_encoder_midi_clock_value;
+        }
+        ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
+        install_int_ex(ticker_midi_clock, ticker_midi_clock_rate);
+        break;
+    default:
+        break;
     }
-break;
-case 1://absolute , on récupère de toute facon le niveau midi comme base
-    midi_BPM=relativ_encoder_midi_clock_value*level;
-    if(midi_BPM<=0){midi_BPM=relativ_encoder_midi_clock_value;}
-    ticker_midi_clock_rate=BPM_TO_TIMER(24 * midi_BPM);
-    install_int_ex(ticker_midi_clock , ticker_midi_clock_rate);
-break;
-default:
-break;
-}
 
-return(0);
+    return(0);
 }
 
 int reset_channel_first_dimmer_list()
@@ -1020,7 +1084,7 @@ int generate_channel_preview_patch_list()//affichage du premier grada
                     show_more_than_one_dim[ch]=1;
                     break;
                 default:
-                break;
+                    break;
                 }
             }
 
@@ -1633,10 +1697,10 @@ int clear_completely_the_patch()
         dimmer_type[i]=0;
     }
     //modif 18/12/14 merci rui serge
-     for(int pl=0;pl<128;pl++)
+    for(int pl=0; pl<128; pl++)
     {
-    snapshot_symbol_dimmer_is[pl]=0;
-    for(int c=0; c<4; c++)
+        snapshot_symbol_dimmer_is[pl]=0;
+        for(int c=0; c<4; c++)
         {
             symbol_dimmer_is[c][pl]=0;
         }
@@ -1779,22 +1843,22 @@ int refresh_all_midi_out_faders()
 
     for(int i=0; i<48; i++) //faders
     {
-            index_send_midi_out[i]=1;
+        index_send_midi_out[i]=1;
     }
 
     for(int i=196; i<(196+48); i++) //LFO
     {
-            index_send_midi_out[i]=1;
+        index_send_midi_out[i]=1;
     }
 
-    for (int i=1960; i<2007;i++ )//decay
+    for (int i=1960; i<2007; i++ ) //decay
     {
-            index_send_midi_out[i]=1;
+        index_send_midi_out[i]=1;
     }
 
     for (int i=2056 ; i <2113; i++)//dt
     {
-            index_send_midi_out[i]=1;
+        index_send_midi_out[i]=1;
     }
 
 
@@ -1967,7 +2031,7 @@ int constrain_banger_param(int lp)
         }
         break;
     default:
-    break;
+        break;
     }
 
     return(0);
@@ -2079,7 +2143,7 @@ int refresh_hauteur_fenetre_grider()
         hauteurGlobalGridviewer=100+(grider_nb_row*size_preview_case);
         break;
     default:
-    break;
+        break;
     }
     if(grider_nb_row>=10)
     {
@@ -2157,7 +2221,7 @@ int Get_channels_from_memory(int the_mem)
                 bufferBlind[p]=Memoires[the_mem][p];
                 break;
             default:
-            break;
+                break;
             }
         }
     }
@@ -2223,7 +2287,7 @@ int search_and_desaffect_previous_midi_signal(int typaction)
             }
             break;
         default:
-        break;
+            break;
         }
     }
 
@@ -2262,8 +2326,8 @@ void show_type_midi(int control, const std::string command)
         strcpy(thetypinfo,"");
         break;
     }
-    sprintf(string_last_midi_id,"%s selected is Ch: %d Pitch: %d Typ: %s" ,command.c_str(), miditable[1][control],miditable[2][control],thetypinfo);
-    sprintf(string_shortview_midi,"%s %d/%d",thetypinfo ,miditable[1][control],miditable[2][control]);
+    sprintf(string_last_midi_id,"%s selected is Ch: %d Pitch: %d Typ: %s",command.c_str(), miditable[1][control],miditable[2][control],thetypinfo);
+    sprintf(string_shortview_midi,"%s %d/%d",thetypinfo,miditable[1][control],miditable[2][control]);
 //sab 02/03/2014     return(0);
 }
 
@@ -2326,14 +2390,17 @@ int attribute_midi_to_control(int faderis, int typaction, int modeaction)
                     miditable[2][faderis+h]=ispitch;
                 }
                 break;
-            default:break;
+            default:
+                break;
             }
         }
     }
 
 //midi affect auto close
-if( index_midi_affectation_autoclose==1)
-    {Midi_Faders_Affectation_Type=0;}
+    if( index_midi_affectation_autoclose==1)
+    {
+        Midi_Faders_Affectation_Type=0;
+    }
 
 
     return(0);
@@ -2375,8 +2442,10 @@ int attribute_midi_solo_affectation(int faderis, int modeaction)
     }
 
 //midi affect auto close
-if( index_midi_affectation_autoclose==1)
-    {Midi_Faders_Affectation_Type=0;}
+    if( index_midi_affectation_autoclose==1)
+    {
+        Midi_Faders_Affectation_Type=0;
+    }
 
     return(0);
 }
@@ -2852,10 +2921,11 @@ int show_who_is_in_dock (int fader, int thedokis)
     case 4:
         sprintf(thetypinfo,"Ctrl Change");
         break;
-     default:break;
+    default:
+        break;
     }
 
-    sprintf(string_last_midi_id,"FADER is Ch: %d Pitch: %d Typ: %s" , miditable[1][fader],miditable[2][fader],thetypinfo);
+    sprintf(string_last_midi_id,"FADER is Ch: %d Pitch: %d Typ: %s", miditable[1][fader],miditable[2][fader],thetypinfo);
 
 
     if(thedokis==0 || thedokis==1) //up down button
@@ -2875,7 +2945,8 @@ int show_who_is_in_dock (int fader, int thedokis)
         case 4:
             sprintf(thetypinfo,"Ctrl Change");
             break;
-            default: break;
+        default:
+            break;
         }
 
         sprintf(string_last_midi_id,"DOCK is Ch: %d Pitch: %d Type: %s", miditable[1][48+fader+(thedokis*48)],miditable[2][48+fader+(thedokis*48)],thetypinfo);
@@ -2941,7 +3012,8 @@ int scan_audiofolder()
     if(!al_findfirst("*.*",&f,-1))
     {
         while(!al_findnext(&f))
-        {//18/6/2015 correction christoph  unsigned int a
+        {
+            //18/6/2015 correction christoph  unsigned int a
             int f_name_len = strlen(f.name);
             for(int a=0; a< f_name_len; a++)
             {
@@ -3139,13 +3211,13 @@ int write_window_indexes_from_list_of_windows()
 int rafraichissement_clockwheel()
 {
 
-   clock_vx = cos(angle_snap_clock)* rayon_wheel_level;
-   clock_vy = sin(angle_snap_clock)* rayon_wheel_level;
-   position_curseur_clock_x= window_cfgX+770+clock_vx;
-   position_curseur_clock_y=window_cfgY+115+clock_vy ;
+    clock_vx = cos(angle_snap_clock)* rayon_wheel_level;
+    clock_vy = sin(angle_snap_clock)* rayon_wheel_level;
+    position_curseur_clock_x= window_cfgX+770+clock_vx;
+    position_curseur_clock_y=window_cfgY+115+clock_vy ;
 
 
-return(0);
+    return(0);
 }
 
 int recall_windows()
@@ -3204,7 +3276,8 @@ int set_time_cursor_to_time_type(int the_time_wheel_datatype)
     case 2://dixiemes
         angle_timesnap=angle_timesnap_dix;
         break;
-     default:break;
+    default:
+        break;
     }
     time_angle=angle_timesnap;
     refresh_time_cursor();
@@ -3220,81 +3293,90 @@ int set_time_cursor_to_time_type(int the_time_wheel_datatype)
 
 int read_time_string_entry()
 {
-time_minutes=0;
-time_secondes=0;
-time_centiemes=0;
+    time_minutes=0;
+    time_secondes=0;
+    time_centiemes=0;
 
-int position_minutes=0;// dans chaine
+    int position_minutes=0;// dans chaine
 
 
-char str_tmp[24];
-sprintf(str_tmp, numeric);
+    char str_tmp[24];
+    sprintf(str_tmp, numeric);
 
 //lecture d'une chaine minutes / secondes / centiemes ou bien secondes / centiemes
-if(numeric[0]!='.')//si la chaine n'est pas des centiemes de secondes)
-{
+    if(numeric[0]!='.')//si la chaine n'est pas des centiemes de secondes)
+    {
 //sortir les minutes
-for(int i=0;i<23;i++)
-{
-if(str_tmp[i]=='.' && str_tmp[i+1]=='.' && numeric[0]!='.')
-{
-char tmp_tmp[24];
-sprintf(tmp_tmp,numeric);
-tmp_tmp[i]='\0';
-time_minutes=atoi(tmp_tmp);
-position_minutes=i+1;
-}
-}
-sprintf(str_tmp,"%s", "");
+        for(int i=0; i<23; i++)
+        {
+            if(str_tmp[i]=='.' && str_tmp[i+1]=='.' && numeric[0]!='.')
+            {
+                char tmp_tmp[24];
+                sprintf(tmp_tmp,numeric);
+                tmp_tmp[i]='\0';
+                time_minutes=atoi(tmp_tmp);
+                position_minutes=i+1;
+            }
+        }
+        sprintf(str_tmp,"%s", "");
 //expurgation chaine des minutes
-for(int i=0;i<(24-position_minutes);i++)
-{
-str_tmp[i]=numeric[position_minutes+i];
-}
+        for(int i=0; i<(24-position_minutes); i++)
+        {
+            str_tmp[i]=numeric[position_minutes+i];
+        }
 //report secondes centiemes
-char chaine_multiple[2][8];
-char *pch;
-pch = strtok (str_tmp,".");
-int pass=0;
- while (pch != NULL)
-  {
-    sprintf(chaine_multiple[pass],pch);
-    pch = strtok (NULL, ".");
-    pass++;
-  }
+        char chaine_multiple[2][8];
+        char *pch;
+        pch = strtok (str_tmp,".");
+        int pass=0;
+        while (pch != NULL)
+        {
+            sprintf(chaine_multiple[pass],pch);
+            pch = strtok (NULL, ".");
+            pass++;
+        }
 
-time_secondes=atoi(chaine_multiple[0]);
-time_centiemes=atoi(chaine_multiple[1]);
-}
+        time_secondes=atoi(chaine_multiple[0]);
+        time_centiemes=atoi(chaine_multiple[1]);
+    }
 
-else if (numeric[0]=='.')//centiemes appelés uniquement
-{
-char cent_t[4];
-for (int i=0;i<4;i++)
-{
-cent_t[i]=numeric[i+1];
-time_centiemes=atoi(cent_t);
-}
-}
+    else if (numeric[0]=='.')//centiemes appelés uniquement
+    {
+        char cent_t[4];
+        for (int i=0; i<4; i++)
+        {
+            cent_t[i]=numeric[i+1];
+            time_centiemes=atoi(cent_t);
+        }
+    }
 
-sprintf(string_Last_Order,"Your entry: %d min %d sec %d 1/100", time_minutes, time_secondes, time_centiemes);
-reset_numeric_entry();
+    sprintf(string_Last_Order,"Your entry: %d min %d sec %d 1/100", time_minutes, time_secondes, time_centiemes);
+    reset_numeric_entry();
 
-if(time_minutes>59){time_minutes=59;}
-if(time_secondes>59){time_secondes=59;}
-if(time_centiemes>99){time_centiemes=99;}
+    if(time_minutes>59)
+    {
+        time_minutes=59;
+    }
+    if(time_secondes>59)
+    {
+        time_secondes=59;
+    }
+    if(time_centiemes>99)
+    {
+        time_centiemes=99;
+    }
 
 //report des angles popur garder la mesure en fin de chrono.
-angle_timesnap_min=((float)(time_minutes)/59)*5.980005;//=(int)((angle_timesnap_min/6.280005)*63);
-angle_timesnap_sec=((float)(time_secondes)/59)*5.980005;//=(int)((angle_timesnap_sec/((PI*360) / 180))*63);
-angle_timesnap_dix=((float)(time_centiemes)/99)*5.980005;//=(int)((angle_timesnap_dix/6.280005)*10);
+    angle_timesnap_min=((float)(time_minutes)/59)*5.980005;//=(int)((angle_timesnap_min/6.280005)*63);
+    angle_timesnap_sec=((float)(time_secondes)/59)*5.980005;//=(int)((angle_timesnap_sec/((PI*360) / 180))*63);
+    angle_timesnap_dix=((float)(time_centiemes)/99)*5.980005;//=(int)((angle_timesnap_dix/6.280005)*10);
 //pb sur les minutes et secondes, ajustage manuel
 //if(time_wheel_datatype_is==0){angle_timesnap_min+=(5.980005/59/2);}
 //if(time_wheel_datatype_is==1){angle_timesnap_sec+=((PI*360) / 180);}
 
-set_time_cursor_to_time_type(time_wheel_datatype_is);
+    set_time_cursor_to_time_type(time_wheel_datatype_is);
 
-return(0);
+    return(0);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3651,8 +3733,9 @@ int set_channel_scroll( int ch)
             scroll_channelspace=236;
         }
         break;
-         default:break;
-    }
+        default:
+            break;
+        }
     }
     return(0);
 }
@@ -3724,7 +3807,7 @@ int load_Fader_state_to_midi_array()
 
 short midi_send_program_change(int lechannel, short prg_)
 {
-     MidiEvPtr eMid;
+    MidiEvPtr eMid;
     if ((eMid = MidiNewEv(typeProgChange)))
     {
         Port(eMid) = 0;
@@ -3789,16 +3872,16 @@ int send_immidiateley_my_midi_cc( int letype,  int lechannel, int lanote, int la
 
 int midi_send_type_message(int msgmidi)
 {
-     MidiEvPtr eIMid;
-        if ((eIMid = MidiNewEv(msgmidi)))
-        {
+    MidiEvPtr eIMid;
+    if ((eIMid = MidiNewEv(msgmidi)))
+    {
         Port(eIMid) = 0;
         /*Chan(eIMid) = 0;
         Pitch(eIMid)= 0;
         Vel(eIMid)  = 0;*/
         MidiSendIm(myRefNum, eIMid);
-        }
-  return(0);
+    }
+    return(0);
 }
 
 int emit_midi_out()
@@ -3818,7 +3901,7 @@ int emit_midi_out()
         }
     }
 
-return(0);
+    return(0);
 }
 
 int load_etat_picker_dans_dockcolor(int dcolor_selected )
@@ -4042,9 +4125,9 @@ int record_memory_plus_faders(int mem_is)
             {
                 Memoires[mem_is][u]=bufferFaders[u];
             }
-         }
-         //christoph 18/07/2015
-         unselect_ch_and_symbols();
+        }
+        //christoph 18/07/2015
+        unselect_ch_and_symbols();
 //refresh stage
         refresh_mem_onstage(mem_is);
 
@@ -4215,7 +4298,7 @@ int detect_next_mem(int mem_to_detect)//pour import ascii Anton 4 avril 2015
     {
         if(k>=9999)
         {
-    return(0);
+            return(0);
         }
         if(MemoiresExistantes[k]==1)
         {
@@ -4657,9 +4740,9 @@ int build_default_curve(int curve)
 
     curve_spline_level=(((float)index_curve_spline_level)/127)-1;
 
-    for (int i=0;i<255;i++)
+    for (int i=0; i<255; i++)
     {
-    curve_report[curve][i]=255-i;
+        curve_report[curve][i]=255-i;
     }
 
     view_curve_after_draw();
@@ -4823,7 +4906,8 @@ int refresh_minifader_state_view_core(int cmptfader)
     case 12:
         sprintf(str_tmp_minidock_dock,"GridPl.%d",(faders_dock_grid_affectation[cmptfader][dokmin]+1));
         break;
-     default:break;
+    default:
+        break;
     }
     sprintf(str_minifader_feedback[1],"Dock %d %s",(dokmin+1),str_tmp_minidock_dock);
 
@@ -4840,7 +4924,8 @@ int refresh_minifader_state_view_core(int cmptfader)
     case 2:
         sprintf(report_minifader_str,"Status: Down");
         break;
-    default: break;
+    default:
+        break;
     }
 
     if(lfo_mode_is[cmptfader]==0 && lfo_cycle_is_on[cmptfader]==1)
@@ -4884,7 +4969,8 @@ int refresh_minifader_state_view_core(int cmptfader)
         case 1:
             niv=LevelStopPos[cmptfader];
             break;
-         default:break;
+        default:
+            break;
         }
         sprintf(string_fader_stop_pos[cmptfader],"%d",niv);
         sprintf(str_minifader_feedback[9],"Stop Pos ON: %d",niv);
@@ -4943,7 +5029,8 @@ int do_action_on_selected_minifaders(int action)
                     midi_levels[cmptfader]=(int)(((float)Fader[cmptfader])/2);
                     sprintf(string_Last_Order,">> UNLOCKED Fader %d",cmptfader+1);
                     break;
-                 default:break;
+                default:
+                    break;
                 }
                 break;
             case 2://loop on off
@@ -5055,7 +5142,8 @@ int do_action_on_selected_minifaders(int action)
                         }
                     }
                     break;
-                    default:break;
+                default:
+                    break;
 
                 }
                 break;
@@ -5079,7 +5167,7 @@ int do_action_on_selected_minifaders(int action)
                     is_dock_for_lfo_selected[cmptfader][d]=0;
                 }
 
-            break;
+                break;
 
             case 8://Set pos job
 
@@ -5102,7 +5190,8 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             lStopPos=atol(numeric);
                             break;
-                         default:break;
+                        default:
+                            break;
                         }
                         reset_numeric_entry();
                         if (lStopPos>=0 && lStopPos<=255)
@@ -5222,7 +5311,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -5235,7 +5325,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -5248,7 +5339,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 3://PLAYER 4
@@ -5261,10 +5353,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                default: break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -5274,7 +5368,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -5293,7 +5388,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -5306,7 +5402,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -5319,7 +5416,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 3://PLAYER 4
@@ -5332,10 +5430,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                default: break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -5345,7 +5445,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -5364,7 +5465,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -5377,7 +5479,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -5390,7 +5493,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
 
@@ -5404,10 +5508,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -5417,7 +5523,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -5444,7 +5551,8 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             sprintf(string_Last_Order,">> PLAY ON from Fader %d Chaser %d",cmptfader+1,the_chaser+1);
                             break;
-                             default:break;
+                        default:
+                            break;
                         }
                         break;
                     case 12://grid
@@ -5461,11 +5569,12 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             sprintf(string_Last_Order,">> PLAY ON from Fader %d GridPl %d",cmptfader+1,the_grid_player+1);
                             break;
-                             default:break;
+                        default:
+                            break;
                         }
                         break;
                     default:
-                    break;
+                        break;
                     }
                 }
 
@@ -5683,11 +5792,11 @@ int do_sprintf_job()//report du calcul des affichages de temps dans la boucle de
 
     if((index_go==1 || index_go_back==1)&& index_pause==0)
     {
-            //sab 27/01/2015 deb
+        //sab 27/01/2015 deb
         //Affichage du temps du crossfade en cours : l'affichage du temps restant, commence souvent à moins "quelque chose".
         //time_left=((crossfade_done_time-totalTimeCrossfade)/BPS_RATE);
         //affichage_time_format(time_left);
-                //sprintf(string_time_left_is,"%s",string_conversion_timeis);
+        //sprintf(string_time_left_is,"%s",string_conversion_timeis);
 
         float f_time_left = totalTimeCrossfade - float (crossfade_done_time) / BPS_RATE ;
         affichage_time_format(f_time_left);
@@ -5891,7 +6000,7 @@ int window_who_is_on_top()
 
 int substract_a_window(int id)
 {
-/* christoph 11/04/2014 begin replace */
+    /* christoph 11/04/2014 begin replace */
     int erase_window_opened[64];
     int next_free_pos;
     next_free_pos=0;
@@ -5900,8 +6009,8 @@ int substract_a_window(int id)
     for(int old_pos=0; old_pos<63; old_pos++)
     {
         if((window_opened[old_pos]!=id)  //id has been erase from the deque
-  && (window_opened[old_pos]!=0)  //shouldn't hapen
-  && (next_free_pos<63))    // don't overflow
+                && (window_opened[old_pos]!=0)  //shouldn't hapen
+                && (next_free_pos<63))    // don't overflow
         {
             erase_window_opened[next_free_pos]=window_opened[old_pos];
             next_free_pos = next_free_pos+1;
@@ -5916,15 +6025,15 @@ int substract_a_window(int id)
         }
     }
     //copy
- for(int i=0; i<63; i++) //both are 72 occurences long
+    for(int i=0; i<63; i++) //both are 72 occurences long
     {
-  window_opened[i] = erase_window_opened[i];
+        window_opened[i] = erase_window_opened[i];
     }
     //first window get focus
     window_focus_id=window_opened[0];
-/* sab 05/03/2014 end replace */
+    /* sab 05/03/2014 end replace */
 
-   reset_index_actions();
+    reset_index_actions();
 
     switch(id)
     {
@@ -6050,11 +6159,15 @@ int substract_a_window(int id)
         break;
     }
 
-nbre_fenetre_actives--;
+    nbre_fenetre_actives--;
 
-if (nbre_fenetre_actives<=0){nbre_fenetre_actives=0;window_focus_id=0;}
+    if (nbre_fenetre_actives<=0)
+    {
+        nbre_fenetre_actives=0;
+        window_focus_id=0;
+    }
 
-return(0);
+    return(0);
 }
 
 int clear_ip_artnet()
@@ -6065,7 +6178,7 @@ int clear_ip_artnet()
         sprintf(IP_detected_dmxOUT[u],"-");
     }
 
-return(0);
+    return(0);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -6992,14 +7105,14 @@ int GlobInit()
         }
     }
 
-   //////////////WAVE//////////////////////////
-   for(int i=0;i<26;i++)
-   {
-           // Wave_Dampered[i].fix_all_damper_state_value(Fader[in]);
-           // Wave_Dampered[i].set_target_val(Fader[in]);
-            Wave_Dampered[i].set_damper_decay(1.0);
-            Wave_Dampered[i].set_damper_dt(0.1);
-   }
+    //////////////WAVE//////////////////////////
+    for(int i=0; i<26; i++)
+    {
+        // Wave_Dampered[i].fix_all_damper_state_value(Fader[in]);
+        // Wave_Dampered[i].set_target_val(Fader[in]);
+        Wave_Dampered[i].set_damper_decay(1.0);
+        Wave_Dampered[i].set_damper_dt(0.1);
+    }
 
 
 ///////////////////////////////////////////////////////////////
@@ -7072,17 +7185,17 @@ int reset_show()
 
 int substract_channel_selection_to_layers_plot()
 {
-int tmp_ch=0;
-for(int l=0;l<4;l++)
-{
-for(int i=0;i<=nbre_symbols_on_plot[l];i++)
-{
-tmp_ch=symbol_channel_is[l][i];
-if(Selected_Channel[tmp_ch]==0)
-{
-symbol_is_selected[l][i]= 0;
-}
-}
-}
-return(0);
+    int tmp_ch=0;
+    for(int l=0; l<4; l++)
+    {
+        for(int i=0; i<=nbre_symbols_on_plot[l]; i++)
+        {
+            tmp_ch=symbol_channel_is[l][i];
+            if(Selected_Channel[tmp_ch]==0)
+            {
+                symbol_is_selected[l][i]= 0;
+            }
+        }
+    }
+    return(0);
 }

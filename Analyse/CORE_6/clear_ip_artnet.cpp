@@ -6,5 +6,5 @@ int clear_ip_artnet()
         sprintf(IP_detected_dmxOUT[u],"-");
     }
 
-return(0);
+    return(0);
 }

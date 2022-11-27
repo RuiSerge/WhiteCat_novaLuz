@@ -1,14 +1,14 @@
 int substract_a_window(int id)
 {
-/* christoph 11/04/2014 begin replace */
+    /* christoph 11/04/2014 begin replace */
     int erase_window_opened[64];
     int next_free_pos;
     next_free_pos=0;
     for(int old_pos=0; old_pos<63; old_pos++)
     {
         if((window_opened[old_pos]!=id)  //id has been erase from the deque
-  && (window_opened[old_pos]!=0)  //shouldn't hapen
-  && (next_free_pos<63))    // don't overflow
+                && (window_opened[old_pos]!=0)  //shouldn't hapen
+                && (next_free_pos<63))    // don't overflow
         {
             erase_window_opened[next_free_pos]=window_opened[old_pos];
             next_free_pos = next_free_pos+1;
@@ -23,15 +23,15 @@ int substract_a_window(int id)
         }
     }
     //copy
- for(int i=0; i<63; i++) //both are 72 occurences long
+    for(int i=0; i<63; i++) //both are 72 occurences long
     {
-  window_opened[i] = erase_window_opened[i];
+        window_opened[i] = erase_window_opened[i];
     }
     //first window get focus
     window_focus_id=window_opened[0];
-/* sab 05/03/2014 end replace */
+    /* sab 05/03/2014 end replace */
 
-   reset_index_actions();
+    reset_index_actions();
 
     switch(id)
     {
@@ -157,9 +157,13 @@ int substract_a_window(int id)
         break;
     }
 
-nbre_fenetre_actives--;
+    nbre_fenetre_actives--;
 
-if (nbre_fenetre_actives<=0){nbre_fenetre_actives=0;window_focus_id=0;}
+    if (nbre_fenetre_actives<=0)
+    {
+        nbre_fenetre_actives=0;
+        window_focus_id=0;
+    }
 
-return(0);
+    return(0);
 }

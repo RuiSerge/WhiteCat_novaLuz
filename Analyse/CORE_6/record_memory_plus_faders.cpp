@@ -13,9 +13,9 @@ int record_memory_plus_faders(int mem_is)
             {
                 Memoires[mem_is][u]=bufferFaders[u];
             }
-         }
-         //christoph 18/07/2015
-         unselect_ch_and_symbols();
+        }
+        //christoph 18/07/2015
+        unselect_ch_and_symbols();
         refresh_mem_onstage(mem_is);
 
 

@@ -24,9 +24,9 @@ int build_default_curve(int curve)
 
     curve_spline_level=(((float)index_curve_spline_level)/127)-1;
 
-    for (int i=0;i<255;i++)
+    for (int i=0; i<255; i++)
     {
-    curve_report[curve][i]=255-i;
+        curve_report[curve][i]=255-i;
     }
 
     view_curve_after_draw();

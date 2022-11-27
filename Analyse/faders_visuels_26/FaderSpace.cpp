@@ -41,7 +41,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                     petitchiffrerouge.Print(ol::ToString((int)StateOfFaderBeforeLock[cmptfader]),x+(cmptfader*espacement)+12,y+273);
                 }
                 break;
-            default: break;
+            default:
+                break;
             }
             sprintf(string_channel,"%d", cmptfader+1);
 
@@ -54,7 +55,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
             case 1://espace séquenciel
                 RouteMdeFx.Draw(CouleurNiveau.WithAlpha(0.5));
                 break;
-            default: break;
+            default:
+                break;
             }
             RouteMdeFx.DrawOutline(CouleurLigne.WithAlpha(0.5));
 
@@ -201,7 +203,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                         case 1:
                             FaderB.DrawOutline(CouleurLock);
                             break;
-                        default: break;
+                        default:
+                            break;
                         }
                     }
                     else if(DockTypeIs[cmptfader][dd]==11)//chaser
@@ -345,7 +348,8 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                 case 1:
                     niv=LevelStopPos[cmptfader];
                     break;
-                default: break;
+                default:
+                    break;
                 }
                 switch(ActionnateStopOn[cmptfader])
                 {
@@ -357,10 +361,11 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
                     Line(Vec2D(x+(cmptfader*espacement),(y+255) - LevelStopPos[cmptfader]),Vec2D(x+(cmptfader*espacement)+40,(y+255) - LevelStopPos[cmptfader])).Draw(CouleurBlind);
                     petitpetitchiffrerouge.Print(ol::ToString(niv),x+(cmptfader*espacement)+20,(y+255) - LevelStopPos[cmptfader]);
                     break;
-                default: break;
+                default:
+                    break;
                 }
             }
-            neuro.Print(string_niveau ,x+(cmptfader*espacement), y-25); //niveau du fader
+            neuro.Print(string_niveau,x+(cmptfader*espacement), y-25);  //niveau du fader
 
             doom.Print(string_channel,x+(cmptfader*espacement)+70, y-40);
 
@@ -502,7 +507,7 @@ int FaderSpace(int x, int y, int espacement,int nbr_fader)
 
             }
 
-fader_damper_commands(x+(cmptfader*espacement)-10,y+440, cmptfader );
+            fader_damper_commands(x+(cmptfader*espacement)-10,y+440, cmptfader );
         }
     }
 

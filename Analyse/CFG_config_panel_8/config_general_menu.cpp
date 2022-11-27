@@ -32,27 +32,27 @@ int config_general_menu()
     int grp_tab_espace_bord_top_Y   = 5;
 
     //Dessine les onglets de la fenêtre de configuration et détecte si l'on a cliqué sur l'un d'eux
-	int grp_tab_largeur 	= largeurCFGwindow - grp_tab_espace_bord_left_X - grp_tab_espace_bord_right_X;
-	//
+    int grp_tab_largeur 	= largeurCFGwindow - grp_tab_espace_bord_left_X - grp_tab_espace_bord_right_X;
+    //
     int zone_onglet_largeur(floor(grp_tab_largeur / nbr_onglets)) ;  // floor --> arrondi inférieur ; ceil--> arrondi supérieur
     int espace_entre_onglet = 10 ;
     //
     int onglet_largeur 		= zone_onglet_largeur - espace_entre_onglet;
     int onglet_hauteur		= 40 ;
-	//
+    //
     int grp_tab_X 			= window_cfgX + zone_onglet_largeur;  //position X sur l'écran  du groupe d'onglets
-	//
-	int espace_bord_txt_X 	= 5; //position du texte par rapport au bord ue l'onglet
-	int espace_bord_txt_Y   = 25 ;
+    //
+    int espace_bord_txt_X 	= 5; //position du texte par rapport au bord ue l'onglet
+    int espace_bord_txt_Y   = 25 ;
 
     for (int choix=0; choix < nbr_onglets ; choix++)
     {
         Rect CadreOnglet(Vec2D( grp_tab_X+(choix * zone_onglet_largeur),
-								window_cfgY + grp_tab_espace_bord_top_Y),
-						 Vec2D( onglet_largeur, onglet_hauteur));
+                                window_cfgY + grp_tab_espace_bord_top_Y),
+                         Vec2D( onglet_largeur, onglet_hauteur));
         CadreOnglet.SetRoundness(7.5);
         CadreOnglet.Draw(CouleurBleuProcedure.WithAlpha(0.8));
-		//
+        //
         if(config_page_is==choix+1)
         {
             CadreOnglet.SetLineWidth(epaisseur_ligne_fader/2);
@@ -61,7 +61,7 @@ int config_general_menu()
         }
         // Logical
         if((hk_manager.hk_user_update_isOn()!=true)  // pas de mouse effect si en attente de saisie d'une hotkey pou redefinir le lien avec une fonction
-			&& mouseOverTab_W_CFGMENU(choix, grp_tab_X, espace_entre_onglet, onglet_largeur, onglet_hauteur, grp_tab_espace_bord_top_Y))
+                && mouseOverTab_W_CFGMENU(choix, grp_tab_X, espace_entre_onglet, onglet_largeur, onglet_hauteur, grp_tab_espace_bord_top_Y))
         {
             if(config_page_is!=choix+1)
             {
@@ -76,7 +76,7 @@ int config_general_menu()
                 switch(choix)
                 {
                 case 0 :
-                	index_config_dmx=1;
+                    index_config_dmx=1;
                     break;
                 case 1 :
                     index_config_midi=1;
@@ -104,22 +104,22 @@ int config_general_menu()
             }
         }
         neuromoyen.Print(onglet_libelle[choix],
-						 grp_tab_X + (choix*zone_onglet_largeur) + espace_bord_txt_X,
-						 window_cfgY + grp_tab_espace_bord_top_Y + espace_bord_txt_Y,
-						 onglet_largeur - 2 * espace_bord_txt_X,	//espace dispo en largeur pour le texte
-						 CENTER);
+                         grp_tab_X + (choix*zone_onglet_largeur) + espace_bord_txt_X,
+                         window_cfgY + grp_tab_espace_bord_top_Y + espace_bord_txt_Y,
+                         onglet_largeur - 2 * espace_bord_txt_X,	//espace dispo en largeur pour le texte
+                         CENTER);
     }
 
     //fond panneau de l'onglet
     Rect ConfigPanel(Vec2D( window_cfgX, window_cfgY + onglet_hauteur), 			//recouvre le bas des onglets
-					 Vec2D( largeurCFGwindow, hauteurCFGwindow));
+                     Vec2D( largeurCFGwindow, hauteurCFGwindow));
     ConfigPanel.SetRoundness(15);
     ConfigPanel.Draw(CouleurConfig);
     ConfigPanel.DrawOutline(CouleurLigne);
     //efface ligne entre onglet actif et son panneau
     Rect CleanLine( Vec2D( 	grp_tab_X + ((config_page_is-1) * zone_onglet_largeur),
-								window_cfgY + onglet_hauteur - epaisseur_ligne_fader),
-						Vec2D(  onglet_largeur, epaisseur_ligne_fader * 4 ));
+                            window_cfgY + onglet_hauteur - epaisseur_ligne_fader),
+                    Vec2D(  onglet_largeur, epaisseur_ligne_fader * 4 ));
     CleanLine.Draw(CouleurBleuProcedure.WithAlpha(1));
     CleanLine.Draw(CouleurConfig.WithAlpha(1));
 

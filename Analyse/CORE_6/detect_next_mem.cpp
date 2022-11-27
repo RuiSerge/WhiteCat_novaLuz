@@ -4,7 +4,7 @@ int detect_next_mem(int mem_to_detect)//pour import ascii Anton 4 avril 2015
     {
         if(k>=9999)
         {
-    return(0);
+            return(0);
         }
         if(MemoiresExistantes[k]==1)
         {

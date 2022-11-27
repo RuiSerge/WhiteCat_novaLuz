@@ -36,7 +36,8 @@ int all_at_zero_panel_visu(int xf, int yf)
         case 7:
             sprintf(str_titre,"RECALL");
             break;
-        default: break;
+        default:
+            break;
         }
         if(window_focus_id==W_MINIFADERS && mouse_x>xf && mouse_x<xf+50 && mouse_y>yf+10+(25*u) && mouse_y<yf+30+(25*u))
         {
@@ -54,7 +55,8 @@ int all_at_zero_panel_visu(int xf, int yf)
             case 4:
                 sprintf(thetypinfo,"Ctrl Change");
                 break;
-            default: break;
+            default:
+                break;
             }
             sprintf(string_last_midi_id,"AtZero Command %d is Ch: %d Pitch: %d Type: %s",u, miditable[1][548+u],miditable[2][548+u],thetypinfo);
             //config midi

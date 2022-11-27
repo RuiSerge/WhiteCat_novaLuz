@@ -40,7 +40,8 @@ int do_action_on_selected_minifaders(int action)
                     midi_levels[cmptfader]=(int)(((float)Fader[cmptfader])/2);
                     sprintf(string_Last_Order,">> UNLOCKED Fader %d",cmptfader+1);
                     break;
-                 default:break;
+                default:
+                    break;
                 }
                 break;
             case 2://loop on off
@@ -145,7 +146,8 @@ int do_action_on_selected_minifaders(int action)
                         }
                     }
                     break;
-                    default:break;
+                default:
+                    break;
 
                 }
                 break;
@@ -169,7 +171,7 @@ int do_action_on_selected_minifaders(int action)
                     is_dock_for_lfo_selected[cmptfader][d]=0;
                 }
 
-            break;
+                break;
 
             case 8://Set pos job
 
@@ -192,7 +194,8 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             lStopPos=atol(numeric);
                             break;
-                         default:break;
+                        default:
+                            break;
                         }
                         reset_numeric_entry();
                         if (lStopPos>=0 && lStopPos<=255)
@@ -312,7 +315,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -325,7 +329,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -338,7 +343,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 3://PLAYER 4
@@ -351,10 +357,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                default: break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -364,7 +372,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -383,7 +392,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -396,7 +406,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -409,7 +420,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 3://PLAYER 4
@@ -422,10 +434,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                default: break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -435,7 +449,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -454,7 +469,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player1->stop();
                                     player1_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 1://PLAYER 2
@@ -467,7 +483,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player2->stop();
                                     player2_do_stop();
                                     break;
-                                     default:break;
+                                default:
+                                    break;
                                 }
                                 break;
                             case 2://PLAYER 3
@@ -480,7 +497,8 @@ int do_action_on_selected_minifaders(int action)
                                     //player3->stop();
                                     player3_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
 
@@ -494,10 +512,12 @@ int do_action_on_selected_minifaders(int action)
                                     //player4->stop();
                                     player4_do_stop();
                                     break;
-                                 default:break;
+                                default:
+                                    break;
                                 }
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                             switch(player_is_playing[the_audio_player])//inversed by action
                             {
@@ -507,7 +527,8 @@ int do_action_on_selected_minifaders(int action)
                             case 1:
                                 sprintf(string_Last_Order,">> PLAY OFF from Fader %d Audio %d",cmptfader+1,the_audio_player+1);
                                 break;
-                                 default:break;
+                            default:
+                                break;
                             }
                         }
                         break;
@@ -533,7 +554,8 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             sprintf(string_Last_Order,">> PLAY ON from Fader %d Chaser %d",cmptfader+1,the_chaser+1);
                             break;
-                             default:break;
+                        default:
+                            break;
                         }
                         break;
                     case 12://grid
@@ -550,11 +572,12 @@ int do_action_on_selected_minifaders(int action)
                         case 1:
                             sprintf(string_Last_Order,">> PLAY ON from Fader %d GridPl %d",cmptfader+1,the_grid_player+1);
                             break;
-                             default:break;
+                        default:
+                            break;
                         }
                         break;
                     default:
-                    break;
+                        break;
                     }
                 }
 

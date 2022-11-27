@@ -138,11 +138,11 @@ int do_sprintf_job()//report du calcul des affichages de temps dans la boucle de
 
     if((index_go==1 || index_go_back==1)&& index_pause==0)
     {
-            //sab 27/01/2015 deb
+        //sab 27/01/2015 deb
         //Affichage du temps du crossfade en cours : l'affichage du temps restant, commence souvent � moins "quelque chose".
         //time_left=((crossfade_done_time-totalTimeCrossfade)/BPS_RATE);
         //affichage_time_format(time_left);
-                //sprintf(string_time_left_is,"%s",string_conversion_timeis);
+        //sprintf(string_time_left_is,"%s",string_conversion_timeis);
 
         float f_time_left = totalTimeCrossfade - float (crossfade_done_time) / BPS_RATE ;
         affichage_time_format(f_time_left);
